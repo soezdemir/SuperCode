@@ -1,12 +1,12 @@
 /**
  * Created by cpatzek & soezdemir 17/05/2017.
  */
-import java.util.*;
+
 
 public class Spielfigur
 {
-    // Farben in hex: rot=DF1818, gruen=18DF18, blau=1839DE, lila=DE18DF, gelb=DEDF18, orange=DE5A18, pink = 
-DE5A82
+    // FARBEN in hex: rot=DF1818, gruen=18DF18, blau=1839DE, lila=DE18DF, gelb=DEDF18, orange=DE5A18, pink =
+//DE5A82
     // hellgruen = 9CDF18, schwarz = 0, weiss=FFFFFF
     public static final int ROT = 0xDF1818;
     public static final int GRUEN = 0x18DF18;
@@ -19,12 +19,18 @@ DE5A82
     public static final int SCHWARZ = 0;
     public static final int WEISS= 0xFFFFFF;
     public static final int GROESSE = 5;
-    public static final ArrayList<int> farben = new ArrayList<int>{ROT, GRUEN, BLAU, LILA, GELB, ORANGE, 
-PINK, 
-HELLGRUEN,
-        SCHWARZ, WEISS};
+    public static final int[] FARBEN = {ROT, GRUEN, BLAU, LILA, GELB, ORANGE, PINK, HELLGRUEN, SCHWARZ, WEISS};
+
     Spielfigur(int farbe)
     {
+        this.farbe = farbe;
+    }
+
+    public int getFarbe() {
+        return farbe;
+    }
+
+    public void setFarbe(int farbe) {
         this.farbe = farbe;
     }
     private int farbe;
