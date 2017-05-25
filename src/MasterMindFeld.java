@@ -1,3 +1,6 @@
+/**
+ * Created by Noctis on 24.05.2017.
+ */
 import java.util.Random;
 
 public class MasterMindFeld extends Spielfeld

@@ -17,11 +17,13 @@ public class MasterMind
     private int position;
 
     //private MasterMindRegeln regeln;
+
     private MasterMind()
     {
         spielbrett = new Spielbrett();
         //regeln = new MasterMindRegeln();
     }
+
     private void spielBeenden(int fall)
     {
         BufferedReader eingabe = new BufferedReader(new InputStreamReader(System.in));
@@ -46,6 +48,7 @@ public class MasterMind
             ioe.printStackTrace();
         }
     }
+
     private void setzeTippFeld()
     {
         int i = 0;
@@ -68,6 +71,7 @@ public class MasterMind
 
         }
     }
+
     private void pruefeSiegBedingung()
     {
         System.out.println("Siegbedingung");
@@ -82,6 +86,7 @@ public class MasterMind
 
         }
     }
+
     private void setzeSpielfiguren()
     {
         BufferedReader eingabe = new BufferedReader(new InputStreamReader(System.in));

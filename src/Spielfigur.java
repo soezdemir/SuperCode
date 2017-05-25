@@ -1,30 +1,22 @@
 /**
  * Created by cpatzek & soezdemir 17/05/2017.
  */
-
-
 public class Spielfigur
 {
-    // FARBEN in hex: rot=DF1818, gruen=18DF18, blau=1839DE, lila=DE18DF, gelb=DEDF18, orange=DE5A18, pink =
-//DE5A82
-    // hellgruen = 9CDF18, schwarz = 0, weiss=FFFFFF
     public static final int ROT = 0xDF1818;
-    public static final int GRUEN = 0x18DF18;
-    public static final int BLAU = 0x1839DE;
-    public static final int LILA = 0xDE18DF;
-    public static final int GELB = 0xDEDF18;
-    public static final int ORANGE = 0xDE5A18;
-    public static final int PINK = 0xDE5A82;
-    public static final int HELLGRUEN = 0x9CDF18;
-    public static final int SCHWARZ = 0;
+    public static final int ORANGE = 0xFF6A00;
+    public static final int GELB = 0xFFF500;
+    public static final int BLAU = 0x183DFF;
+    public static final int GRUEN = 0x00B712;
+    public static final int HELLGRUEN = 0xB6FF00;
+    public static final int PINK = 0xFF7FD5;
+    public static final int LILA = 0xB200FF;
+    public static final int SCHWARZ = 0x000000;
     public static final int WEISS= 0xFFFFFF;
-    public static final int GROESSE = 5;
+
     public static final int[] FARBEN = {ROT, GRUEN, BLAU, LILA, GELB, ORANGE, PINK, HELLGRUEN, SCHWARZ, WEISS};
 
-    Spielfigur(int farbe)
-    {
-        this.farbe = farbe;
-    }
+    public static final int GROESSE = 5;
 
     public int getFarbe() {
         return farbe;
@@ -33,5 +25,11 @@ public class Spielfigur
     public void setFarbe(int farbe) {
         this.farbe = farbe;
     }
+
     private int farbe;
+
+    Spielfigur(int farbe)
+    {
+        this.farbe = farbe;
+    }
 }
