@@ -1,6 +1,3 @@
-/**
- * Created by Noctis on 24.05.2017.
- */
 import java.util.Random;
 
 public class MasterMindFeld extends Spielfeld
@@ -11,12 +8,6 @@ public class MasterMindFeld extends Spielfeld
     }
     MasterMindFeld()
     {
-        System.out.println("Konstruktor MasterMindFeld");
-        for(int i = 0; i < GROESSE; i++)
-        {
-            figuren[i] = new Spielfigur(Spielfigur.FARBEN[random()]);
-            System.out.println("Position: "+i+"Farbe: "+figuren[i].getFarbe());
-        }
-
+        super();
     }
 }

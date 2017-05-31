@@ -1,14 +1,14 @@
 /**
  * Created by cpatzek & soezdemir  17/05/2017.
  */
+//Feld das alle Spielfiguren und Ihre Farben haelt zur Auswahl in der GUI
 public class FigurenFeld extends Spielfeld
 {
-    public static final int GROESSE = 8;
+    public static final int GROESSE = 10;
     private Spielfigur figuren[] = new Spielfigur[GROESSE];
     FigurenFeld()
     {
-        super();
-        for(int i = 5; i < GROESSE; i++)
+        for(int i = 0; i < GROESSE; i++)
         {
             figuren[i] = new Spielfigur(Spielfigur.FARBEN[i]);
         }

@@ -4,27 +4,29 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+// Klasse die den Spielfluss bestimmt
 public class MasterMind
 {
+    private static final int SPIELERMASTER = 1;
+    private static final int VERSUCHSSPIELER = 0;
     private static final int ZUGBEENDEN = 2;
     private static final int SPIELBEENDEN = 1;
     private Spielbrett spielbrett;
     private boolean siegBedingung = false;
     private boolean zugBeenden = false;
+    private boolean feldStatus = true;
     private int versuche = 0;
-    private int farbe;
-    private int position;
+    private int farbe = 0;
+    private int position = 0;
 
     //private MasterMindRegeln regeln;
-
     private MasterMind()
     {
         spielbrett = new Spielbrett();
         //regeln = new MasterMindRegeln();
     }
-
-    private void spielBeenden(int fall)
+    //Abfrage ob die Runde oder das Spiel beendet werden soll, je nach Situation
+    private void spielBeenden(int fall, int spieler)
     {
         BufferedReader eingabe = new BufferedReader(new InputStreamReader(System.in));
         try
@@ -35,11 +37,17 @@ public class MasterMind
                     System.out.print("Moechten Sie das Spiel beenden?(y/n) ");
                     if(eingabe.readLine().contains("y"))
                         System.exit(0);
+                    siegBedingung = false;
+                    versuche = 0;
                     break;
                 case ZUGBEENDEN:
-                    System.out.print("Moechten Sie Ihren Zug beenden?(y/n) ");
-                    if(eingabe.readLine().contains("y"))
-                        zugBeenden = true;
+                    feldStatus = spielbrett.pruefeVersuchsOderMasterFeld(spieler);
+                    if(!feldStatus)
+                    {
+                        System.out.print("Moechten Sie Ihren Zug beenden?(y/n) ");
+                        if(eingabe.readLine().contains("y"))
+                            zugBeenden = true;
+                    }
                     break;
             }
         }
@@ -49,49 +57,12 @@ public class MasterMind
         }
     }
 
+    //Belege tippfeld, die Runde kann erst beendet werden wenn das Feld richtig gesetzt wurde
     private void setzeTippFeld()
     {
-        int i = 0;
-        int j = 0;
-        for(Spielfigur versuch : spielbrett.getVersuch().figuren)
-        {
-            for(Spielfigur master : spielbrett.getMaster().figuren)
-            {
-                if(versuch.getFarbe() == master.getFarbe())
-                {
-                    if(i==j)
-                        spielbrett.getTipp().figuren[i].setFarbe(Spielfigur.SCHWARZ);
-                    else
-                        spielbrett.getTipp().figuren[i].setFarbe(Spielfigur.WEISS);
-                }
-                j++;
-            }
-            i++;
-            j = 0;
-
-        }
-    }
-
-    private void pruefeSiegBedingung()
-    {
-        System.out.println("Siegbedingung");
-        siegBedingung = true;
-        for(int i = 0; i < spielbrett.getVersuch().figuren.length; i++)
-        {
-            if(spielbrett.getVersuch().figuren[i].getFarbe() != spielbrett.getMaster().figuren[i].getFarbe())
-            {
-                System.out.println("SiegBedingung nicht erfuellt");
-                siegBedingung = false;
-            }
-
-        }
-    }
-
-    private void setzeSpielfiguren()
-    {
         BufferedReader eingabe = new BufferedReader(new InputStreamReader(System.in));
-        zugBeenden = false;
-        while(!zugBeenden)
+        boolean tippFeldStatus = true;
+        while (tippFeldStatus)
         {
             try
             {
@@ -99,10 +70,51 @@ public class MasterMind
                 farbe = Integer.parseInt(eingabe.readLine());
                 System.out.print("Position: ");
                 position = Integer.parseInt(eingabe.readLine());
-                spielbrett.getVersuch().setzeSpielfigur(this.position, new Spielfigur(this.farbe));
-                System.out.println("Versuch Feld: Position: "+position+" Farbe: "+
-                        spielbrett.getVersuch().figuren[position].getFarbe());
-                spielBeenden(ZUGBEENDEN);
+                spielbrett.getTipp().setzeSpielfigur(position, new Spielfigur(farbe));
+                /*System.out.println("Versuch Feld: Position: "+position+" Farbe: "+
+                        spielbrett.getVersuch().figuren[position].getFarbe());*/
+                tippFeldStatus = spielbrett.pruefeTippFeld();
+            }
+            catch (IOException ioe)
+            {
+                ioe.printStackTrace();
+            }
+        }
+    }
+    //preuft ob das Versuchs Feld dem Master Feld entspricht, also ob die Sieg Bedingung erfuellt ist
+    private void pruefeSiegBedingung()
+    {
+        //System.out.println("Siegbedingung");
+        siegBedingung = true;
+        for(int i = 0; i < spielbrett.getVersuch().figuren.length; i++)
+        {
+            if(spielbrett.getVersuch().figuren[i].getFarbe() != spielbrett.getMaster().figuren[i].getFarbe())
+            {
+                //System.out.println("SiegBedingung nicht erfuellt");
+                siegBedingung = false;
+                return;
+            }
+
+        }
+    }
+    //Setzen des Versuchsfeldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
+    private void setzeVersuchsFeld()
+    {
+        BufferedReader eingabe = new BufferedReader(new InputStreamReader(System.in));
+        zugBeenden = false;
+        feldStatus = true;
+        while(!zugBeenden || feldStatus)
+        {
+            try
+            {
+                System.out.print("Farbe: ");
+                farbe = Integer.parseInt(eingabe.readLine());
+                System.out.print("Position: ");
+                position = Integer.parseInt(eingabe.readLine());
+                spielbrett.getVersuch().setzeSpielfigur(position, new Spielfigur(farbe));
+                /*System.out.println("Versuch Feld: Position: "+position+" Farbe: "+
+                        spielbrett.getVersuch().figuren[position].getFarbe());*/
+                spielBeenden(ZUGBEENDEN, VERSUCHSSPIELER);
             }
             catch(IOException ioe)
             {
@@ -110,20 +122,48 @@ public class MasterMind
             }
         }
     }
-
+    //Setzen des MasterMind Feldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
+    private void setzeMasterMind()
+    {
+        BufferedReader eingabe = new BufferedReader(new InputStreamReader(System.in));
+        zugBeenden = false;
+        feldStatus = true;
+        while(!zugBeenden || feldStatus)
+        {
+            try
+            {
+                System.out.print("Farbe: ");
+                farbe = Integer.parseInt(eingabe.readLine());
+                System.out.print("Position: ");
+                position = Integer.parseInt(eingabe.readLine());
+                spielbrett.getMaster().setzeSpielfigur(position, new Spielfigur(farbe));
+                /*System.out.println("Versuch Feld: Position: "+position+" Farbe: "+
+                        spielbrett.getVersuch().figuren[position].getFarbe());*/
+                spielBeenden(ZUGBEENDEN, SPIELERMASTER);
+            }
+            catch(IOException ioe)
+            {
+                ioe.printStackTrace();
+            }
+        }
+    }
+    //Hauptschleife des Spiels. Sequenziertes setzen der Felde und pruefen auf Siegbedingung. Wurde Sieg erreicht,
+    //Frage ob Spiel beendet werden soll oder weiter gespielt werden soll
     private void spielen()
     {
         while(true)
         {
+            setzeMasterMind();
             while (!siegBedingung && versuche < 11)
             {
-                setzeSpielfiguren();
+                setzeVersuchsFeld();
                 setzeTippFeld();
                 pruefeSiegBedingung();
                 versuche++;
+                spielbrett.setTipp(new TippFeld());
             }
             spielbrett = new Spielbrett();
-            spielBeenden(SPIELBEENDEN);
+            spielBeenden(SPIELBEENDEN, SPIELERMASTER);
         }
     }
     public static void main(String args[]) {

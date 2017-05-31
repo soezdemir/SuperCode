@@ -1,6 +1,7 @@
 /**
  * Created by Noctis on 24.05.2017.
  */
+//wird noch nicht benoetigt. Vlt in Zukunft zum Auslagern von Code
 public class MasterMindRegeln
 {
     public boolean isBeendeZug() {
