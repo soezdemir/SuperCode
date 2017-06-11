@@ -181,10 +181,10 @@ public class MasterMind
     //Frage ob Spiel beendet werden soll oder weiter gespielt werden soll
     private void spielen()
     {
-        while(true)
-        {
+        //while(true)
+        //{
             gui.zeichneSpielbrett();
-            setzeMasterMind();
+            /*setzeMasterMind();
             while (!siegBedingung && versuche < 11)
             {
                 setzeVersuchsFeld();
@@ -195,7 +195,7 @@ public class MasterMind
             }
             spielbrett = new Spielbrett();
             spielBeenden(SPIELBEENDEN, SPIELERMASTER);
-        }
+        }*/
     }
     /*public static void main(String args[]) {
         try {
