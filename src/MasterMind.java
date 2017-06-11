@@ -1,9 +1,11 @@
 /**
  * Created by Noctis on 24.05.2017.
  */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
 // Klasse die den Spielfluss bestimmt
 public class MasterMind
 {
@@ -16,13 +18,41 @@ public class MasterMind
     private boolean zugBeenden = false;
     private boolean feldStatus = true;
     private int versuche = 0;
+
+    public int getFarbe() {
+        return farbe;
+    }
+
+    public void setFarbe(int farbe) {
+        this.farbe = farbe;
+    }
+
     private int farbe = 0;
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
     private int position = 0;
+    private GUI gui = new GUI();
 
     //private MasterMindRegeln regeln;
-    private MasterMind()
+    public MasterMind()
     {
-        spielbrett = new Spielbrett();
+        try
+        {
+            spielbrett = new Spielbrett();
+            this.spielen();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
         //regeln = new MasterMindRegeln();
     }
     //Abfrage ob die Runde oder das Spiel beendet werden soll, je nach Situation
@@ -153,6 +183,7 @@ public class MasterMind
     {
         while(true)
         {
+            gui.zeichneSpielbrett();
             setzeMasterMind();
             while (!siegBedingung && versuche < 11)
             {
@@ -166,7 +197,7 @@ public class MasterMind
             spielBeenden(SPIELBEENDEN, SPIELERMASTER);
         }
     }
-    public static void main(String args[]) {
+    /*public static void main(String args[]) {
         try {
             MasterMind spielSitzung = new MasterMind();
             spielSitzung.spielen();
@@ -174,5 +205,5 @@ public class MasterMind
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
-    }
+    }*/
 }
