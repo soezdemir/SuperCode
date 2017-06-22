@@ -8,14 +8,14 @@
    <children>
       <HBox layoutX="37.0" layoutY="634.0" prefHeight="62.0" prefWidth="589.0">
          <children>
-            <Button fx:id="rot" mnemonicParsing="false" onAction="#handleRotAction" prefHeight="51.0" prefWidth="61.0" style="-fx-background-image: url(/graphics/spielfiguren/rot.png);" />
-            <Button fx:id="pink" mnemonicParsing="false" onAction="#handlePinkAction" prefHeight="50.0" prefWidth="59.0" style="-fx-background-image: url(/graphics/spielfiguren/pink.png);" />
-            <Button fx:id="orange" mnemonicParsing="false" onAction="#handleOrangeAction" prefHeight="49.0" prefWidth="58.0" style="-fx-background-image: url(/graphics/spielfiguren/orange.png);" />
-            <Button fx:id="lila" mnemonicParsing="false" onAction="#handleLilaAction" prefHeight="50.0" prefWidth="77.0" style="-fx-background-image: url(/graphics/spielfiguren/lila.png);" />
-            <Button fx:id="hellgruen" mnemonicParsing="false" onAction="#handleHellgruenAction" prefHeight="50.0" prefWidth="79.0" style="-fx-background-image: url(/graphics/spielfiguren/hellgruen.png);" />
-            <Button fx:id="gelb" mnemonicParsing="false" onAction="#handleGelbAction" prefHeight="52.0" prefWidth="56.0" style="-fx-background-image: url(/graphics/spielfiguren/gelb.png);" />
-            <Button fx:id="gruen" mnemonicParsing="false" onAction="#handleGruenAction" prefHeight="53.0" prefWidth="93.0" style="-fx-background-image: url(/graphics/spielfiguren/gruen.png);" />
-            <Button fx:id="blau" mnemonicParsing="false" onAction="#handleBlauAction" prefHeight="53.0" prefWidth="98.0" style="-fx-background-image: url(/graphics/spielfiguren/blau.png);" />
+            <Button mnemonicParsing="false" onAction="#handleRotAction" prefHeight="51.0" prefWidth="61.0" style="-fx-background-image: url(/graphics/spielfiguren/rot.png);" />
+            <Button mnemonicParsing="false" onAction="#handlePinkAction" prefHeight="50.0" prefWidth="59.0" style="-fx-background-image: url(/graphics/spielfiguren/pink.png);" />
+            <Button mnemonicParsing="false" onAction="#handleOrangeAction" prefHeight="49.0" prefWidth="58.0" style="-fx-background-image: url(/graphics/spielfiguren/orange.png);" />
+            <Button mnemonicParsing="false" onAction="#handleLilaAction" prefHeight="50.0" prefWidth="77.0" style="-fx-background-image: url(/graphics/spielfiguren/lila.png);" />
+            <Button mnemonicParsing="false" onAction="#handleHellgruenAction" prefHeight="50.0" prefWidth="79.0" style="-fx-background-image: url(/graphics/spielfiguren/hellgruen.png);" />
+            <Button mnemonicParsing="false" onAction="#handleGelbAction" prefHeight="52.0" prefWidth="56.0" style="-fx-background-image: url(/graphics/spielfiguren/gelb.png);" />
+            <Button mnemonicParsing="false" onAction="#handleGruenAction" prefHeight="53.0" prefWidth="93.0" style="-fx-background-image: url(/graphics/spielfiguren/gruen.png);" />
+            <Button mnemonicParsing="false" onAction="#handleBlauAction" prefHeight="53.0" prefWidth="98.0" style="-fx-background-image: url(/graphics/spielfiguren/blau.png);" />
          </children>
       </HBox>
       <HBox id="versuch1" layoutX="97.0" layoutY="585.0" prefHeight="30.0" prefWidth="400.0">

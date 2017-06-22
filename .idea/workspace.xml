@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/stages/masterSignal.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/stages/versuch.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/stages/zwischenMaster.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/stages/zwischenVersuch.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GUI/stages/zwischenStage.fxml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/GUI.java" afterPath="$PROJECT_DIR$/src/GUI/GUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StartController.java" afterPath="$PROJECT_DIR$/src/GUI/StartController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MasterMind/MasterMind.java" afterPath="$PROJECT_DIR$/src/MasterMind/MasterMind.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/stages/startbild.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/startbild.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/stages/versuch.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/versuch.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/stages/zwischenMaster.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/zwischenMaster.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/stages/zwischenVersuch.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/zwischenVersuch.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,23 +82,21 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="235" lean-forward="false" selection-start-line="6" selection-start-column="235" selection-end-line="6" selection-end-column="235" />
-              <folding>
-                <marker date="1498136644977" expanded="true" signature="20582:20655" ph="..." />
-              </folding>
+            <state relative-caret-position="-3862">
+              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mastermindSetzen.fxml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mastermindSetzen.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            <state relative-caret-position="524">
+              <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -114,17 +108,56 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="381" lean-forward="false" selection-start-line="8" selection-start-column="381" selection-end-line="8" selection-end-column="381" />
+            <state relative-caret-position="378">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StartController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="masterSignal.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/stages/masterSignal.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zwischenMaster.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/stages/zwischenMaster.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zwischenVersuch.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/stages/zwischenVersuch.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/StartController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
+            <state relative-caret-position="3108">
               <caret line="153" column="43" lean-forward="true" selection-start-line="153" selection-start-column="43" selection-end-line="153" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -163,13 +196,14 @@
         <option value="$PROJECT_DIR$/src/GUI/mastermindSetzen.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/startbild.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/stages/zwischenStage.fxml" />
-        <option value="$PROJECT_DIR$/src/GUI/stages/versuch.fxml" />
-        <option value="$PROJECT_DIR$/src/GUI/stages/zwischenMaster.fxml" />
-        <option value="$PROJECT_DIR$/src/GUI/stages/zwischenVersuch.fxml" />
         <option value="$PROJECT_DIR$/src/MasterMind/MasterMind.java" />
-        <option value="$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/StartController.java" />
         <option value="$PROJECT_DIR$/src/GUI/GUI.java" />
+        <option value="$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml" />
+        <option value="$PROJECT_DIR$/src/GUI/stages/versuch.fxml" />
+        <option value="$PROJECT_DIR$/src/GUI/stages/startbild.fxml" />
+        <option value="$PROJECT_DIR$/src/GUI/stages/zwischenMaster.fxml" />
+        <option value="$PROJECT_DIR$/src/GUI/stages/zwischenVersuch.fxml" />
       </list>
     </option>
   </component>
@@ -709,7 +743,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498126005447</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Erster Zug kann gespielt werden! es fehlt noch das Signalfeld setzen und der Übergang zurück zur Versuchstage">
+      <created>1498137046253</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1498137046253</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -766,7 +807,8 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Mastermind setzen ist jetzt mit GUI möglich. Problem ist die GUI sieht scheiße aus das muss ich alles noch bearbeiten. ansonsten geht alles und es wird am Ende des Zuges ein Zwischenbild angezeigt." />
     <MESSAGE value="Kurze Änderungen. Fange jetzt an auszulagern. Neue Controller klassen werden folgen." />
-    <option name="LAST_COMMIT_MESSAGE" value="Kurze Änderungen. Fange jetzt an auszulagern. Neue Controller klassen werden folgen." />
+    <MESSAGE value="Erster Zug kann gespielt werden! es fehlt noch das Signalfeld setzen und der Übergang zurück zur Versuchstage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Erster Zug kann gespielt werden! es fehlt noch das Signalfeld setzen und der Übergang zurück zur Versuchstage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -863,17 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/stages/startbild.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="381" lean-forward="false" selection-start-line="8" selection-start-column="381" selection-end-line="8" selection-end-column="381" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/stages/zwischenStage.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -881,39 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="235" lean-forward="false" selection-start-line="7" selection-start-column="235" selection-end-line="7" selection-end-column="235" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/stages/zwischenMaster.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="235" lean-forward="false" selection-start-line="7" selection-start-column="235" selection-end-line="7" selection-end-column="235" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/stages/zwischenVersuch.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="235" lean-forward="false" selection-start-line="7" selection-start-column="235" selection-end-line="7" selection-end-column="235" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/stages/masterSignal.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -956,13 +954,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml">
+    <entry file="file://$PROJECT_DIR$/src/GUI/StartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3108">
+          <caret line="153" column="43" lean-forward="true" selection-start-line="153" selection-start-column="43" selection-end-line="153" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/stages/zwischenVersuch.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        <state relative-caret-position="189">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/stages/zwischenMaster.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -972,21 +991,42 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="235" lean-forward="false" selection-start-line="6" selection-start-column="235" selection-end-line="6" selection-end-column="235" />
-          <folding>
-            <marker date="1498136644977" expanded="true" signature="20582:20655" ph="..." />
-          </folding>
+        <state relative-caret-position="-3862">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/StartController.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/stages/startbild.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="153" column="43" lean-forward="true" selection-start-line="153" selection-start-column="43" selection-end-line="153" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="378">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/stages/masterSignal.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
