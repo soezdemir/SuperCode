@@ -6,8 +6,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import GUI.FXMLController;
-import javafx.stage.Stage;
 
 // Klasse die den Spielfluss bestimmt
 public class MasterMind implements Runnable
@@ -17,7 +15,7 @@ public class MasterMind implements Runnable
     private static final int ZUGBEENDEN = 2;
     private static final int SPIELBEENDEN = 1;
 
-    private FXMLController controller;
+    //private StartController controller;
     private Spielbrett spielbrett;
     private boolean siegBedingung = false;
 
@@ -83,12 +81,11 @@ public class MasterMind implements Runnable
     //private GUI gui = new GUI();
 
     //private MasterMind.MasterMindRegeln regeln;
-    public MasterMind(FXMLController controller)
+    public MasterMind()
     {
         try
         {
             spielbrett = new Spielbrett();
-            this.controller = controller;
         }
         catch(Exception e)
         {
