@@ -1,17 +1,8 @@
 package GUI;
 
-import MasterMind.MasterMind;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
-import javafx.scene.image.*;
-import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
-import javafx.geometry.*;
-import javafx.scene.layout.BackgroundRepeat;
 import javafx.stage.Stage;
 
 public class GUI extends Application
@@ -25,14 +16,14 @@ public class GUI extends Application
     }
     @Override
     public void start(Stage stage)throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("startbild.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("stages/startbild.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public Stage ladeMastermindSetzen(Stage stage)throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("mastermindSetzen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("stages/mastermindSetzen.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -41,7 +32,7 @@ public class GUI extends Application
 
     public Stage ladeZwischenStage(Stage stage)throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("zwischenStage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("stages/zwischenStage.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
