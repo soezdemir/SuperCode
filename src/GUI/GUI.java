@@ -16,8 +16,9 @@ import javafx.stage.Stage;
 
 public class GUI extends Application
 {
-    private MasterMind mastermind;
+    private Stage currentStage;
 
+    public GUI(){}
     public static void main(String[] args)
     {
         launch(args);
@@ -28,6 +29,23 @@ public class GUI extends Application
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    public Stage ladeMastermindSetzen(Stage stage)throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("mastermindSetzen.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        return stage;
+    }
+
+    public Stage ladeZwischenStage(Stage stage)throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("zwischenStage.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        return stage;
     }
         /*BackgroundImage background = new BackgroundImage(new Image("/graphics/menu/MasterMindStartbild_2.png",
                 1280,720,true,true), BackgroundRepeat.valueOf("NO_REPEAT"),

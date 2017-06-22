@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SuperCodeGUI.iml" filepath="$PROJECT_DIR$/SuperCodeGUI.iml" />
+      <module fileurl="file://D:\IdeaProjects\SuperCodeWTF\SuperCodeGUI.iml" filepath="D:\IdeaProjects\SuperCodeWTF\SuperCodeGUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SuperCodeWTF.iml" filepath="$PROJECT_DIR$/.idea/SuperCodeWTF.iml" />
     </modules>
   </component>
 </project>

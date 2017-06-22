@@ -6,16 +6,39 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import GUI.FXMLController;
+import javafx.stage.Stage;
+
 // Klasse die den Spielfluss bestimmt
-public class MasterMind
+public class MasterMind implements Runnable
 {
     private static final int SPIELERMASTER = 1;
     private static final int VERSUCHSSPIELER = 0;
     private static final int ZUGBEENDEN = 2;
     private static final int SPIELBEENDEN = 1;
+
+    private FXMLController controller;
     private Spielbrett spielbrett;
     private boolean siegBedingung = false;
+
+    public boolean isZugBeenden() {
+        return zugBeenden;
+    }
+
+    public void setZugBeenden(boolean zugBeenden) {
+        this.zugBeenden = zugBeenden;
+    }
+
     private boolean zugBeenden = false;
+
+    public boolean isFeldStatus() {
+        return feldStatus;
+    }
+
+    public void setFeldStatus(boolean feldStatus) {
+        this.feldStatus = feldStatus;
+    }
+
     private boolean feldStatus = true;
     private int versuche = 0;
 
@@ -29,6 +52,25 @@ public class MasterMind
 
     private int farbe = 0;
 
+    public boolean isFarbeGedrueckt() {
+        return farbeGedrueckt;
+    }
+
+    public void setFarbeGedrueckt(boolean farbeGedrueckt) {
+        this.farbeGedrueckt = farbeGedrueckt;
+    }
+
+    public boolean isPositionGedrueckt() {
+        return positionGedrueckt;
+    }
+
+    public void setPositionGedrueckt(boolean positionGedrueckt) {
+        this.positionGedrueckt = positionGedrueckt;
+    }
+
+    private boolean farbeGedrueckt = false;
+    private boolean positionGedrueckt = false;
+
     public int getPosition() {
         return position;
     }
@@ -41,11 +83,12 @@ public class MasterMind
     //private GUI gui = new GUI();
 
     //private MasterMind.MasterMindRegeln regeln;
-    public MasterMind()
+    public MasterMind(FXMLController controller)
     {
         try
         {
             spielbrett = new Spielbrett();
+            this.controller = controller;
         }
         catch(Exception e)
         {
@@ -154,32 +197,31 @@ public class MasterMind
     //Setzen des MasterMind Feldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
     private void setzeMasterMind()
     {
-        BufferedReader eingabe = new BufferedReader(new InputStreamReader(System.in));
+
         zugBeenden = false;
         feldStatus = true;
-        while(!zugBeenden || feldStatus)
+
+        while(!zugBeenden || !feldStatus)
         {
-            try
+            if(farbeGedrueckt && positionGedrueckt)
             {
-                System.out.print("Farbe: ");
-                farbe = Integer.parseInt(eingabe.readLine());
-                System.out.print("Position: ");
-                position = Integer.parseInt(eingabe.readLine());
                 spielbrett.getMaster().setzeSpielfigur(position, new Spielfigur(farbe));
-                /*System.out.println("Versuch Feld: Position: "+position+" Farbe: "+
-                        spielbrett.getVersuch().figuren[position].getFarbe());*/
-                spielBeenden(ZUGBEENDEN, SPIELERMASTER);
+                farbeGedrueckt = false;
+                positionGedrueckt = false;
+                for(int i = 0; i < 5; i++)
+                {
+                    System.out.println("Position"+i+": "+Integer.toHexString(spielbrett.getMaster().figuren[i].getFarbe()));
+                }
             }
-            catch(IOException ioe)
-            {
-                ioe.printStackTrace();
-            }
+            feldStatus = spielbrett.getMaster().pruefeFeldAufGesetzt();
         }
     }
+
     //Hauptschleife des Spiels. Sequenziertes setzen der Felde und pruefen auf Siegbedingung. Wurde Sieg erreicht,
     //Frage ob Spiel beendet werden soll oder weiter gespielt werden soll
-    public void spielen()
+    public void run()
     {
+        setzeMasterMind();
         //while(true)
         //{
             //gui.zeichneSpielbrett();

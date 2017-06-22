@@ -25,11 +25,11 @@ public class Spielfeld
         {
             if(figur.getFarbe() == Spielfigur.GRAU || figur.getFarbe() == Spielfigur.SCHWARZ
                     || figur.getFarbe() == Spielfigur.WEISS)
-                return true;
+                return false;
 
 
         }
-        return false;
+        return true;
     }
     protected void setzeSpielfigur(int position, Spielfigur figur)
     {
