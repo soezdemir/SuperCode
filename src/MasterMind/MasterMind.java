@@ -15,6 +15,14 @@ public class MasterMind implements Runnable
     private static final int ZUGBEENDEN = 2;
     private static final int SPIELBEENDEN = 1;
 
+    public Spielbrett getSpielbrett() {
+        return spielbrett;
+    }
+
+    public void setSpielbrett(Spielbrett spielbrett) {
+        this.spielbrett = spielbrett;
+    }
+
     //private StartController controller;
     private Spielbrett spielbrett;
     private boolean siegBedingung = false;
@@ -169,26 +177,24 @@ public class MasterMind implements Runnable
     //Setzen des Versuchsfeldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
     private void setzeVersuchsFeld()
     {
-        BufferedReader eingabe = new BufferedReader(new InputStreamReader(System.in));
         zugBeenden = false;
-        feldStatus = true;
-        while(!zugBeenden || feldStatus)
+        feldStatus = false;
+        while(!zugBeenden || !feldStatus)
         {
-            try
+            if(farbeGedrueckt && positionGedrueckt)
             {
-                System.out.print("Farbe: ");
-                farbe = Integer.parseInt(eingabe.readLine());
-                System.out.print("Position: ");
-                position = Integer.parseInt(eingabe.readLine());
                 spielbrett.getVersuch().setzeSpielfigur(position, new Spielfigur(farbe));
+                farbeGedrueckt = false;
+                positionGedrueckt = false;
+                for(int i = 0; i < 5; i++)
+                {
+                    System.out.println("Position"+i+": "+Integer.toHexString(spielbrett.getMaster().figuren[i].getFarbe()));
+                }
+            }
                 /*System.out.println("Versuch Feld: Position: "+position+" Farbe: "+
                         spielbrett.getVersuch().figuren[position].getFarbe());*/
-                spielBeenden(ZUGBEENDEN, VERSUCHSSPIELER);
-            }
-            catch(IOException ioe)
-            {
-                ioe.printStackTrace();
-            }
+            feldStatus = spielbrett.getVersuch().pruefeFeldAufGesetzt();
+
         }
     }
     //Setzen des MasterMind Feldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
@@ -196,7 +202,7 @@ public class MasterMind implements Runnable
     {
 
         zugBeenden = false;
-        feldStatus = true;
+        feldStatus = false;
 
         while(!zugBeenden || !feldStatus)
         {
@@ -219,6 +225,7 @@ public class MasterMind implements Runnable
     public void run()
     {
         setzeMasterMind();
+        setzeVersuchsFeld();
         //while(true)
         //{
             //gui.zeichneSpielbrett();

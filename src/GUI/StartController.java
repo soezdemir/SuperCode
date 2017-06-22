@@ -18,6 +18,10 @@ public class StartController
 {
     private static MasterMind masterMind;
     private static GUI gui = new GUI();
+    private static Stage currentstage;
+    private static Stage versuchstage;
+    private static int zug = 1;
+    private static String zugS = Integer.toString(zug);
 
     @FXML private Button startButton;
     @FXML private Button pos0;
@@ -30,7 +34,7 @@ public class StartController
     private static final String BILDDATEIENDUNG =".png);";
 
     private String farbe;
-    private static Stage currentstage;
+    private static String[] posFarbe = new String[5];
 
     @FXML protected void handleStartButtonAction(ActionEvent event)throws Exception
     {
@@ -143,11 +147,40 @@ public class StartController
         masterMind.setPositionGedrueckt(true);
     }
 
-    @FXML protected void handleZugBeendenAction(ActionEvent event)throws Exception
+    @FXML protected void handleZugBeendenMasterAction(ActionEvent event)throws Exception
     {
-        masterMind.setZugBeenden(!masterMind.isZugBeenden());
-        if(masterMind.isZugBeenden() && masterMind.isFeldStatus())
-            currentstage = gui.ladeZwischenStage(currentstage);
+        if(masterMind.isFeldStatus())
+        {
+            masterMind.setZugBeenden(true);
+            currentstage = gui.ladeZwischenMasterStage(currentstage);
+        }
+    }
+
+    @FXML protected void handleZugBeendenVersuchAction(ActionEvent event)throws Exception
+    {
+        if(masterMind.isFeldStatus())
+        {
+            masterMind.setZugBeenden(true);
+            currentstage = gui.ladeZwischenVersuchStage(currentstage);
+        }
+    }
+
+    @FXML protected void handleWeiterMasterAction(ActionEvent event)throws Exception
+    {
+        if(zug == 1)
+            versuchstage = gui.ladeVersuchStage(currentstage);
+        else
+            versuchstage.show();
+        currentstage = versuchstage;
+        //BEISPIEL: currentstage.getScene().lookup("#bla");
+    }
+
+    @FXML protected void handleWeiterVersuchAction(ActionEvent event)throws Exception
+    {
+        currentstage = gui.ladeMastermindSignal(currentstage);
+        for(int i = 0; i < 5; i++)
+            currentstage.getScene().lookup("#pos"+i).setStyle(SPIELFIGURPFAD+posFarbe[i]+BILDDATEIENDUNG);
+        currentstage.show();
     }
 
     private void zeichneNeu()
@@ -156,18 +189,23 @@ public class StartController
         {
             case 0:
                 pos0.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG);
+                posFarbe[0] = farbe;
                 break;
             case 1:
                 pos1.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG);
+                posFarbe[1] = farbe;
                 break;
             case 2:
                 pos2.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG);
+                posFarbe[2] = farbe;
                 break;
             case 3:
                 pos3.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG);
+                posFarbe[3] = farbe;
                 break;
             case 4:
                 pos4.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG);
+                posFarbe[4] = farbe;
                 break;
         }
     }

@@ -30,9 +30,35 @@ public class GUI extends Application
         return stage;
     }
 
-    public Stage ladeZwischenStage(Stage stage)throws Exception
+    public Stage ladeZwischenMasterStage(Stage stage)throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("stages/zwischenStage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("stages/zwischenMaster.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        return stage;
+    }
+
+    public Stage ladeZwischenVersuchStage(Stage stage)throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("stages/zwischenVersuch.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        return stage;
+    }
+
+    public Stage ladeMastermindSignal(Stage stage)throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("stages/masterSignal.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        return stage;
+    }
+
+    public Stage ladeVersuchStage(Stage stage)throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("stages/versuch.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

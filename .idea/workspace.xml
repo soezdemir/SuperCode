@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/stages/masterSignal.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/stages/versuch.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/stages/zwischenMaster.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/stages/zwischenVersuch.fxml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GUI/stages/zwischenStage.fxml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/GUI.java" afterPath="$PROJECT_DIR$/src/GUI/GUI.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/GUI/mastermindSetzen.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/GUI/startbild.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/startbild.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/GUI/zwischenStage.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/zwischenStage.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/StartController.java" afterPath="$PROJECT_DIR$/src/GUI/StartController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MasterMind/MasterMind.java" afterPath="$PROJECT_DIR$/src/MasterMind/MasterMind.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,12 +70,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="273">
+              <caret line="43" column="93" lean-forward="true" selection-start-line="43" selection-start-column="93" selection-end-line="43" selection-end-column="93" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="versuch.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/stages/versuch.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="235" lean-forward="false" selection-start-line="6" selection-start-column="235" selection-end-line="6" selection-end-column="235" />
+              <folding>
+                <marker date="1498136644977" expanded="true" signature="20582:20655" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,8 +101,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="300" lean-forward="false" selection-start-line="6" selection-start-column="300" selection-end-line="6" selection-end-column="300" />
+            <state relative-caret-position="585">
+              <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -101,75 +121,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zwischenStage.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/stages/zwischenStage.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MasterMind.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MasterMind/MasterMind.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2944">
-              <caret line="87" column="42" lean-forward="false" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
-                <element signature="e#622#623#0" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
-                <element signature="e#719#720#0" expanded="true" />
-                <element signature="e#797#798#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#883#884#0" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#1196#1197#0" expanded="true" />
-                <element signature="e#1233#1234#0" expanded="true" />
-                <element signature="e#1294#1295#0" expanded="true" />
-                <element signature="e#1346#1347#0" expanded="true" />
-                <element signature="e#1390#1391#0" expanded="true" />
-                <element signature="e#1430#1431#0" expanded="true" />
-                <element signature="e#1497#1498#0" expanded="true" />
-                <element signature="e#1555#1556#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Spielfeld.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MasterMind/Spielfeld.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StartController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/StartController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+            <state relative-caret-position="-6">
+              <caret line="153" column="43" lean-forward="true" selection-start-line="153" selection-start-column="43" selection-end-line="153" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Spielfigur.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MasterMind/Spielfigur.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -199,13 +158,18 @@
       <list>
         <option value="$PROJECT_DIR$/src/MasterMind.java" />
         <option value="$PROJECT_DIR$/src/GUI.java" />
-        <option value="$PROJECT_DIR$/src/GUI/GUI.java" />
         <option value="$PROJECT_DIR$/src/MasterMind/Spielfeld.java" />
         <option value="$PROJECT_DIR$/src/GUI/FXMLController.java" />
         <option value="$PROJECT_DIR$/src/GUI/mastermindSetzen.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/startbild.fxml" />
+        <option value="$PROJECT_DIR$/src/GUI/stages/zwischenStage.fxml" />
+        <option value="$PROJECT_DIR$/src/GUI/stages/versuch.fxml" />
+        <option value="$PROJECT_DIR$/src/GUI/stages/zwischenMaster.fxml" />
+        <option value="$PROJECT_DIR$/src/GUI/stages/zwischenVersuch.fxml" />
         <option value="$PROJECT_DIR$/src/MasterMind/MasterMind.java" />
+        <option value="$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/StartController.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GUI.java" />
       </list>
     </option>
   </component>
@@ -289,6 +253,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SuperCodeWTF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SuperCodeWTF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -716,7 +702,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498125890851</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Kurze Änderungen. Fange jetzt an auszulagern. Neue Controller klassen werden folgen.">
+      <created>1498126005447</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1498126005447</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -735,7 +728,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33809" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09001098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -886,6 +879,39 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="235" lean-forward="false" selection-start-line="7" selection-start-column="235" selection-end-line="7" selection-end-column="235" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/stages/zwischenMaster.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="235" lean-forward="false" selection-start-line="7" selection-start-column="235" selection-end-line="7" selection-end-column="235" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/stages/zwischenVersuch.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="235" lean-forward="false" selection-start-line="7" selection-start-column="235" selection-end-line="7" selection-end-column="235" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/stages/masterSignal.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -894,37 +920,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MasterMind/MasterMind.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2944">
-          <caret line="87" column="42" lean-forward="false" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
+        <state relative-caret-position="-2163">
+          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-            <element signature="e#1294#1295#0" expanded="true" />
-            <element signature="e#1346#1347#0" expanded="true" />
-            <element signature="e#1390#1391#0" expanded="true" />
-            <element signature="e#1430#1431#0" expanded="true" />
-            <element signature="e#1497#1498#0" expanded="true" />
-            <element signature="e#1555#1556#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#849#850#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#1004#1005#0" expanded="true" />
+            <element signature="e#1057#1058#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="e#1370#1371#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#1564#1565#0" expanded="true" />
+            <element signature="e#1604#1605#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
+            <element signature="e#1729#1730#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/StartController.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="273">
+          <caret line="43" column="93" lean-forward="true" selection-start-line="43" selection-start-column="93" selection-end-line="43" selection-end-column="93" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -933,17 +961,32 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="300" lean-forward="false" selection-start-line="6" selection-start-column="300" selection-end-line="6" selection-end-column="300" />
+        <state relative-caret-position="585">
+          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GUI.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/stages/versuch.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="126">
+          <caret line="6" column="235" lean-forward="false" selection-start-line="6" selection-start-column="235" selection-end-line="6" selection-end-column="235" />
+          <folding>
+            <marker date="1498136644977" expanded="true" signature="20582:20655" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/StartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="153" column="43" lean-forward="true" selection-start-line="153" selection-start-column="43" selection-end-line="153" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

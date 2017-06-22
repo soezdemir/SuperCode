@@ -32,7 +32,7 @@
                   <Button fx:id="blau" mnemonicParsing="false" onAction="#handleBlauAction" prefHeight="53.0" prefWidth="98.0" style="-fx-background-image: url(/graphics/spielfiguren/blau.png);" />
                </children>
             </HBox>
-            <Button fx:id="zugBeenden" layoutX="1128.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleZugBeendenAction" text="Zug Beenden" />
+            <Button fx:id="zugBeenden" layoutX="1128.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleZugBeendenMasterAction" text="Zug Beenden" />
          </children></AnchorPane>
   </items>
 </SplitPane>
