@@ -7,9 +7,7 @@ import javafx.stage.Stage;
 
 public class GUI extends Application
 {
-    private Stage currentStage;
-
-    public GUI(){}
+	public GUI(){}
     public static void main(String[] args)
     {
         launch(args);
@@ -26,7 +24,6 @@ public class GUI extends Application
         Parent root = FXMLLoader.load(getClass().getResource("stages/mastermindSetzen.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.show();
         return stage;
     }
 
@@ -35,7 +32,6 @@ public class GUI extends Application
         Parent root = FXMLLoader.load(getClass().getResource("stages/zwischenMaster.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.show();
         return stage;
     }
 
@@ -44,7 +40,6 @@ public class GUI extends Application
         Parent root = FXMLLoader.load(getClass().getResource("stages/zwischenVersuch.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.show();
         return stage;
     }
 
@@ -61,7 +56,14 @@ public class GUI extends Application
         Parent root = FXMLLoader.load(getClass().getResource("stages/versuch.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.show();
+        return stage;
+    }
+    
+    public Stage ladeSiegStage(Stage stage)throws Exception
+    {
+    	Parent root = FXMLLoader.load(getClass().getResource("stages/sieg.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
         return stage;
     }
         /*BackgroundImage background = new BackgroundImage(new Image("/graphics/menu/MasterMindStartbild_2.png",

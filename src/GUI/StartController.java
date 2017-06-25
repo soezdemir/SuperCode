@@ -18,29 +18,48 @@ public class StartController
 {
     private static MasterMind masterMind;
     private static GUI gui = new GUI();
-    private static Stage currentstage;
-    private static Stage versuchstage;
-    private static int zug = 1;
-    private static String zugS = Integer.toString(zug);
+    private static Stage mastermindSetzen = new Stage();
+    private static Stage versuchstage = new Stage();
+    //private static Stage zwischenMasterStage;
+    private static Stage zwischenVersuchStage = new Stage();
+    private static Stage signalstage = new Stage();
+    private static Stage siegStage = new Stage();
+    private static int zug;
+    //private static String zugS = Integer.toString(zug);
+    private static String farbe;
+    private static String[] posFarbe = new String[5];
+    private static String[] posSignal = new String[5];
 
     @FXML private Button startButton;
-    @FXML private Button pos0;
-    @FXML private Button pos1;
-    @FXML private Button pos2;
-    @FXML private Button pos3;
-    @FXML private Button pos4;
+    @FXML private Button signal0;
+    @FXML private Button signal1;
+    @FXML private Button signal2;
+    @FXML private Button signal3;
+    @FXML private Button signal4;
 
-    private static final String SPIELFIGURPFAD = "-fx-background-image: url(/graphics/spielfiguren/";
+    private static final String BACKGROUND = "-fx-background-";
+    private static final String SPIELFIGURPFAD = BACKGROUND+"image: url(/graphics/spielfiguren/";
+    private static final String SPIELFIGURGROESSE = BACKGROUND+"size: 40px 40px;";
+    private static final String NOREPEAT = BACKGROUND+"repeat: no-repeat;";
+    private static final String BACKGROUNDIMAGEPOSITION = BACKGROUND+"position: center;";
     private static final String BILDDATEIENDUNG =".png);";
-
-    private String farbe;
-    private static String[] posFarbe = new String[5];
+    private static final String MASTER = "#master";
+    private static final String VERSUCH = "#versuch";
+    private static final String SIGNAL = "#signal";
 
     @FXML protected void handleStartButtonAction(ActionEvent event)throws Exception
     {
-        masterMind = new MasterMind();
-        currentstage = (Stage) startButton.getScene().getWindow();
-        currentstage = gui.ladeMastermindSetzen(currentstage);
+        zug = 1;
+    	masterMind = new MasterMind();
+        Stage stage = (Stage) startButton.getScene().getWindow();
+        mastermindSetzen = gui.ladeMastermindSetzen(mastermindSetzen);
+        versuchstage = gui.ladeVersuchStage(versuchstage);
+        zwischenVersuchStage = gui.ladeZwischenVersuchStage(zwischenVersuchStage);
+        signalstage = gui.ladeMastermindSignal(signalstage);
+        siegStage = gui.ladeSiegStage(siegStage);
+        siegStage.hide();
+        mastermindSetzen.show();
+        stage.close();
         Thread engine = new Thread(masterMind);
         engine.start();
         //masterMind.spielen(currentstage, this);
@@ -51,6 +70,20 @@ public class StartController
         System.exit(0);
     }
 
+    @FXML protected void handleSchwarzAction(ActionEvent event)
+    {
+    	masterMind.setFarbe(Spielfigur.SCHWARZ);
+    	farbe = "schwarz";
+    	masterMind.setFarbeGedrueckt(true);
+    }
+    
+    @FXML protected void handleWeissAction(ActionEvent event)
+    {
+    	masterMind.setFarbe(Spielfigur.WEISS);
+    	farbe = "weiss";
+    	masterMind.setFarbeGedrueckt(true);
+    }
+    
     @FXML protected void handleRotAction(ActionEvent event)
     {
         masterMind.setFarbe(Spielfigur.ROT);
@@ -106,12 +139,27 @@ public class StartController
         farbe = "gruen";
         masterMind.setFarbeGedrueckt(true);
     }
-
+    
+    @FXML protected void handleGrauAction(ActionEvent event)
+    {
+    	masterMind.setFarbe(Spielfigur.GRAU);
+    	farbe = "grau";
+    	masterMind.setFarbeGedrueckt(true);
+    }
+    
     @FXML protected void handlePos0Action(ActionEvent event)
     {
         masterMind.setPosition(0);
         if(masterMind.isFarbeGedrueckt())
-            zeichneNeu();
+        {
+        	Button source = (Button) event.getSource();
+        	if(source == signal0)
+        	{
+        		zeichneNeuSignal(source, masterMind.getPosition());
+        	}
+        	else
+        		zeichneNeu(source, masterMind.getPosition());
+        }
         masterMind.setPositionGedrueckt(true);
     }
 
@@ -119,7 +167,15 @@ public class StartController
     {
         masterMind.setPosition(1);
         if(masterMind.isFarbeGedrueckt())
-            zeichneNeu();
+        {
+        	Button source = (Button) event.getSource();
+        	if(source == signal1)
+        	{
+        		zeichneNeuSignal(source, masterMind.getPosition());
+        	}
+        	else
+        		zeichneNeu(source, masterMind.getPosition());
+        }
         masterMind.setPositionGedrueckt(true);
     }
 
@@ -127,7 +183,15 @@ public class StartController
     {
         masterMind.setPosition(2);
         if(masterMind.isFarbeGedrueckt())
-            zeichneNeu();
+        {
+        	Button source = (Button) event.getSource();
+        	if(source == signal2)
+        	{
+        		zeichneNeuSignal(source, masterMind.getPosition());
+        	}
+        	else
+        		zeichneNeu(source, masterMind.getPosition());
+        }
         masterMind.setPositionGedrueckt(true);
     }
 
@@ -135,7 +199,15 @@ public class StartController
     {
         masterMind.setPosition(3);
         if(masterMind.isFarbeGedrueckt())
-            zeichneNeu();
+        {
+        	Button source = (Button) event.getSource();
+        	if(source == signal3)
+        	{
+        		zeichneNeuSignal(source, masterMind.getPosition());
+        	}
+        	else
+        		zeichneNeu(source, masterMind.getPosition());
+        }
         masterMind.setPositionGedrueckt(true);
     }
 
@@ -143,70 +215,97 @@ public class StartController
     {
         masterMind.setPosition(4);
         if(masterMind.isFarbeGedrueckt())
-            zeichneNeu();
+        {
+        	Button source = (Button) event.getSource();
+        	if(source == signal4)
+        	{
+        		zeichneNeuSignal(source, masterMind.getPosition());
+        	}
+        	else
+        		zeichneNeu(source, masterMind.getPosition());
+        }
         masterMind.setPositionGedrueckt(true);
     }
 
+    @FXML protected void handleZugBeendenInitialAction(ActionEvent event)throws Exception
+    {
+    	if(masterMind.isFeldStatus())
+    	{
+    		masterMind.setZugBeenden(true);
+    		//signalstage = gui.ladeMastermindSignal(signalstage);
+        	for(int i = 0; i < 5; i++)
+        		signalstage.getScene().lookup(MASTER+i).setStyle(SPIELFIGURPFAD+posFarbe[i]+BILDDATEIENDUNG
+        				+SPIELFIGURGROESSE+NOREPEAT+BACKGROUNDIMAGEPOSITION);
+        	versuchstage.show();
+        	mastermindSetzen.close();
+    	}
+    }
+    
     @FXML protected void handleZugBeendenMasterAction(ActionEvent event)throws Exception
     {
         if(masterMind.isFeldStatus())
         {
-            masterMind.setZugBeenden(true);
-            currentstage = gui.ladeZwischenMasterStage(currentstage);
+            int i = 0;
+        	masterMind.setZugBeenden(true);
+            versuchstage.getScene().lookup(VERSUCH+Integer.toString(zug)).setVisible(true);
+            versuchstage.getScene().lookup(VERSUCH+Integer.toString(zug-1)).setDisable(true);
+            while(i < 5 && posSignal[i] != "")
+            {
+            	versuchstage.getScene().lookup(SIGNAL+i+Integer.toString(zug-1)).setStyle(SPIELFIGURPFAD+posSignal[i]+BILDDATEIENDUNG
+            			+SPIELFIGURGROESSE+NOREPEAT+BACKGROUNDIMAGEPOSITION);
+            	posSignal[i] = "";
+            	i++;
+            }
+            versuchstage.show();
+            signalstage.hide();
         }
-    }
+     }
 
     @FXML protected void handleZugBeendenVersuchAction(ActionEvent event)throws Exception
     {
-        if(masterMind.isFeldStatus())
+    	if(masterMind.isFeldStatus())
         {
             masterMind.setZugBeenden(true);
-            currentstage = gui.ladeZwischenVersuchStage(currentstage);
+            Thread.sleep(2);
+            if(masterMind.isSiegBedingung())
+            {
+            	siegStage.show();
+            }
+            //TODO verlierstage einrichten
+            else if(zug == 12)
+            {
+            	siegStage.getScene().lookup("#hauptpane").setStyle("eigenschaften des backgrounds(verlierbackground)");
+            	siegStage.show();
+            }
+            else
+            	zwischenVersuchStage.show();
+            versuchstage.hide();
+            zug++;
+            //zugS = Integer.toString(zug);
         }
-    }
-
-    @FXML protected void handleWeiterMasterAction(ActionEvent event)throws Exception
-    {
-        if(zug == 1)
-            versuchstage = gui.ladeVersuchStage(currentstage);
-        else
-            versuchstage.show();
-        currentstage = versuchstage;
-        //BEISPIEL: currentstage.getScene().lookup("#bla");
     }
 
     @FXML protected void handleWeiterVersuchAction(ActionEvent event)throws Exception
     {
-        currentstage = gui.ladeMastermindSignal(currentstage);
-        for(int i = 0; i < 5; i++)
-            currentstage.getScene().lookup("#pos"+i).setStyle(SPIELFIGURPFAD+posFarbe[i]+BILDDATEIENDUNG);
-        currentstage.show();
+    	for(int i = 0; i < 5; i++)
+    	{
+    		signalstage.getScene().lookup(VERSUCH+i).setStyle(SPIELFIGURPFAD+posFarbe[i]+BILDDATEIENDUNG+SPIELFIGURGROESSE+
+    				NOREPEAT+BACKGROUNDIMAGEPOSITION);
+    		signalstage.getScene().lookup(SIGNAL+i).setStyle(BACKGROUND+"image: url();");
+    	}
+    	signalstage.show();
+    	zwischenVersuchStage.hide();
     }
 
-    private void zeichneNeu()
+    private void zeichneNeu(Button source, int position)
     {
-        switch(masterMind.getPosition())
-        {
-            case 0:
-                pos0.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG);
-                posFarbe[0] = farbe;
-                break;
-            case 1:
-                pos1.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG);
-                posFarbe[1] = farbe;
-                break;
-            case 2:
-                pos2.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG);
-                posFarbe[2] = farbe;
-                break;
-            case 3:
-                pos3.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG);
-                posFarbe[3] = farbe;
-                break;
-            case 4:
-                pos4.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG);
-                posFarbe[4] = farbe;
-                break;
-        }
+        posFarbe[position] = farbe;
+        source.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG+SPIELFIGURGROESSE+NOREPEAT+BACKGROUNDIMAGEPOSITION);
+    }
+    
+    private void zeichneNeuSignal(Button source, int position)
+    {
+    	posSignal[position] = farbe;
+    	source.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG+SPIELFIGURGROESSE+NOREPEAT+BACKGROUNDIMAGEPOSITION);
     }
 }
