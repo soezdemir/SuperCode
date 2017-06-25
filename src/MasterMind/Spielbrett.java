@@ -86,11 +86,9 @@ public class Spielbrett
                 weissGesetzt++;
             else if(tipp.getFarbe() == Spielfigur.SCHWARZ)
                 schwarzGesetzt++;
-            else if(tipp.getFarbe() != Spielfigur.GRAU)
-                return true;
         }
         //System.out.println("Schwarz tatsaechlich gesetzt: "+schwarzGesetzt);
-        return(!(schwarzGesetzt == schwarz && weissGesetzt == weiss));
+        return((schwarzGesetzt == schwarz && weissGesetzt == weiss));
     }
     //deprecated
     /*public void bestimmeFarbvektor(int farbe, int fall)
@@ -162,21 +160,21 @@ public class Spielbrett
             {
                 if(versuch.figuren[i].getFarbe() == master.figuren[j].getFarbe())
                 {
-                    if(i == j)
+                    if(i == j && !schwarzRecall[i])
                     {
                         schwarz++;
                         //bestimmeFarbvektor(versuch.figuren[i].getFarbe(), SCHWARZERHOEHEN);
-                        schwarzRecall[j] = true;
-                        if(weissRecall[j])
+                        schwarzRecall[i] = true;
+                        if(weissRecall[i])
                             weiss--;
                         j+=5;
                     }
-                    else if(!schwarzRecall[j] && !weissRecall[j])
+                    else if(!schwarzRecall[i] && !weissRecall[i])
                     {
                         weiss++;
-                        weissRecall[j] = true;
+                        weissRecall[i] = true;
                         //bestimmeFarbvektor(versuch.figuren[i].getFarbe(), WEISSERHOEHEN);
-                        j+=5;
+                        //j+=5;
                     }
                 }
             }

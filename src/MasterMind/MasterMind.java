@@ -25,9 +25,18 @@ public class MasterMind implements Runnable
 
     //private StartController controller;
     private Spielbrett spielbrett;
+    
     private boolean siegBedingung = false;
 
-    public boolean isZugBeenden() {
+    public boolean isSiegBedingung() {
+		return siegBedingung;
+	}
+
+	public void setSiegBedingung(boolean siegBedingung) {
+		this.siegBedingung = siegBedingung;
+	}
+
+	public boolean isZugBeenden() {
         return zugBeenden;
     }
 
@@ -137,32 +146,31 @@ public class MasterMind implements Runnable
     //Belege tippfeld, die Runde kann erst beendet werden wenn das Feld richtig gesetzt wurde
     private void setzeTippFeld()
     {
-        BufferedReader eingabe = new BufferedReader(new InputStreamReader(System.in));
-        boolean tippFeldStatus = true;
-        while (tippFeldStatus)
+        try{
+        	feldStatus = false;
+        	zugBeenden = false;
+        while (!zugBeenden)
         {
-            try
+        	Thread.sleep(1);
+        	if(farbeGedrueckt && positionGedrueckt)
             {
-                System.out.print("Farbe: ");
-                farbe = Integer.parseInt(eingabe.readLine());
-                System.out.print("Position: ");
-                position = Integer.parseInt(eingabe.readLine());
                 spielbrett.getTipp().setzeSpielfigur(position, new Spielfigur(farbe));
+                farbeGedrueckt = false;
+                positionGedrueckt = false;
+            }
                 /*System.out.println("Versuch Feld: Position: "+position+" Farbe: "+
                         spielbrett.getVersuch().figuren[position].getFarbe());*/
-                tippFeldStatus = spielbrett.pruefeTippFeld();
-            }
-            catch (IOException ioe)
-            {
-                ioe.printStackTrace();
-            }
+                feldStatus = spielbrett.pruefeTippFeld();
         }
+    }catch(Exception e){
+    	e.printStackTrace();
+		System.out.println(e.getMessage());
+     }
     }
     //preuft ob das Versuchs Feld dem Master Feld entspricht, also ob die Sieg Bedingung erfuellt ist
     private void pruefeSiegBedingung()
     {
         //System.out.println("Siegbedingung");
-        siegBedingung = true;
         for(int i = 0; i < spielbrett.getVersuch().figuren.length; i++)
         {
             if(spielbrett.getVersuch().figuren[i].getFarbe() != spielbrett.getMaster().figuren[i].getFarbe())
@@ -171,17 +179,19 @@ public class MasterMind implements Runnable
                 siegBedingung = false;
                 return;
             }
-
         }
+        siegBedingung = true;
     }
     //Setzen des Versuchsfeldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
     private void setzeVersuchsFeld()
     {
-        zugBeenden = false;
+        try{
+    	zugBeenden = false;
         feldStatus = false;
-        while(!zugBeenden || !feldStatus)
+        while(!zugBeenden)
         {
-            if(farbeGedrueckt && positionGedrueckt)
+        	Thread.sleep(1);
+        	if(farbeGedrueckt && positionGedrueckt)
             {
                 spielbrett.getVersuch().setzeSpielfigur(position, new Spielfigur(farbe));
                 farbeGedrueckt = false;
@@ -196,17 +206,23 @@ public class MasterMind implements Runnable
             feldStatus = spielbrett.getVersuch().pruefeFeldAufGesetzt();
 
         }
+        }catch(Exception e)
+    	{
+    		e.printStackTrace();
+    		System.out.println(e.getMessage());
+    	}
     }
     //Setzen des MasterMind Feldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
     private void setzeMasterMind()
     {
-
+    	try{
         zugBeenden = false;
         feldStatus = false;
-
-        while(!zugBeenden || !feldStatus)
+    	
+        while(!zugBeenden)
         {
-            if(farbeGedrueckt && positionGedrueckt)
+        	Thread.sleep(1);
+        	if(farbeGedrueckt && positionGedrueckt)
             {
                 spielbrett.getMaster().setzeSpielfigur(position, new Spielfigur(farbe));
                 farbeGedrueckt = false;
@@ -218,14 +234,31 @@ public class MasterMind implements Runnable
             }
             feldStatus = spielbrett.getMaster().pruefeFeldAufGesetzt();
         }
+    	}
+        catch(Exception e)
+    	{
+    		e.printStackTrace();
+    		System.out.println(e.getMessage());
+    	}
+        
     }
 
     //Hauptschleife des Spiels. Sequenziertes setzen der Felde und pruefen auf Siegbedingung. Wurde Sieg erreicht,
     //Frage ob Spiel beendet werden soll oder weiter gespielt werden soll
     public void run()
     {
+        
         setzeMasterMind();
-        setzeVersuchsFeld();
+        while(versuche < 11 || !siegBedingung)
+        {
+        	setzeVersuchsFeld();
+            pruefeSiegBedingung();
+        	setzeTippFeld();
+        	versuche++;
+        	spielbrett.setTipp(new TippFeld());
+        	spielbrett.setVersuch(new VersuchsFeld());
+        }
+        //setzeTippFeld();
         //while(true)
         //{
             //gui.zeichneSpielbrett();
