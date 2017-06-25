@@ -4,227 +4,227 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
    <children>
-      <HBox layoutX="37.0" layoutY="634.0" prefHeight="62.0" prefWidth="589.0">
+      <HBox layoutX="37.0" layoutY="634.0" prefHeight="40.0" prefWidth="320.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleRotAction" prefHeight="51.0" prefWidth="61.0" style="-fx-background-image: url(/graphics/spielfiguren/rot.png);" />
-            <Button mnemonicParsing="false" onAction="#handlePinkAction" prefHeight="50.0" prefWidth="59.0" style="-fx-background-image: url(/graphics/spielfiguren/pink.png);" />
-            <Button mnemonicParsing="false" onAction="#handleOrangeAction" prefHeight="49.0" prefWidth="58.0" style="-fx-background-image: url(/graphics/spielfiguren/orange.png);" />
-            <Button mnemonicParsing="false" onAction="#handleLilaAction" prefHeight="50.0" prefWidth="77.0" style="-fx-background-image: url(/graphics/spielfiguren/lila.png);" />
-            <Button mnemonicParsing="false" onAction="#handleHellgruenAction" prefHeight="50.0" prefWidth="79.0" style="-fx-background-image: url(/graphics/spielfiguren/hellgruen.png);" />
-            <Button mnemonicParsing="false" onAction="#handleGelbAction" prefHeight="52.0" prefWidth="56.0" style="-fx-background-image: url(/graphics/spielfiguren/gelb.png);" />
-            <Button mnemonicParsing="false" onAction="#handleGruenAction" prefHeight="53.0" prefWidth="93.0" style="-fx-background-image: url(/graphics/spielfiguren/gruen.png);" />
-            <Button mnemonicParsing="false" onAction="#handleBlauAction" prefHeight="53.0" prefWidth="98.0" style="-fx-background-image: url(/graphics/spielfiguren/blau.png);" />
+            <Button mnemonicParsing="false" onAction="#handleRotAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/rot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button mnemonicParsing="false" onAction="#handlePinkAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/pink.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button mnemonicParsing="false" onAction="#handleOrangeAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/orange.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button mnemonicParsing="false" onAction="#handleLilaAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/lila.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button mnemonicParsing="false" onAction="#handleHellgruenAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/hellgruen.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button mnemonicParsing="false" onAction="#handleGelbAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/gelb.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button mnemonicParsing="false" onAction="#handleGruenAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/gruen.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button mnemonicParsing="false" onAction="#handleBlauAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/blau.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
          </children>
       </HBox>
-      <HBox id="versuch1" layoutX="97.0" layoutY="585.0" prefHeight="30.0" prefWidth="400.0">
+      <HBox id="versuch1" layoutX="97.0" layoutY="585.0" prefHeight="40.0" prefWidth="214.0">
          <children>
-            <Button fx:id="pos0" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos1" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos2" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos3" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos4" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Button fx:id="pos01" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos11" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos21" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos31" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos41" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="versuch2" layoutX="97.0" layoutY="544.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox id="versuch2" layoutX="97.0" layoutY="544.0" prefHeight="40.0" prefWidth="200.0" visible="false">
          <children>
-            <Button fx:id="pos01" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos11" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos21" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos31" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos41" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Button fx:id="pos02" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos12" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos22" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos32" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos42" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="versuch3" layoutX="97.0" layoutY="501.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <Button layoutX="766.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleZugBeendenVersuchAction" prefHeight="49.0" prefWidth="208.0" text="Zug Beenden" />
+      <HBox id="versuch3" layoutX="97.0" layoutY="504.0" prefHeight="40.0" prefWidth="214.0" visible="false">
          <children>
-            <Button fx:id="pos02" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos12" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos22" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos32" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos42" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Button fx:id="pos03" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos13" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos23" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos33" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos43" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="versuch4" layoutX="97.0" layoutY="464.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox id="versuch4" layoutX="97.0" layoutY="464.0" prefHeight="40.0" prefWidth="214.0" visible="false">
          <children>
-            <Button fx:id="pos03" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos13" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos23" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos33" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos43" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Button fx:id="pos04" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos14" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos24" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos34" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos44" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="versuch5" layoutX="97.0" layoutY="423.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox id="versuch5" layoutX="97.0" layoutY="424.0" prefHeight="40.0" prefWidth="214.0" visible="false">
          <children>
-            <Button fx:id="pos04" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos14" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos24" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos34" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos44" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Button fx:id="pos05" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos15" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos25" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos35" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos45" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="versuch6" layoutX="97.0" layoutY="385.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox id="versuch6" layoutX="97.0" layoutY="384.0" prefHeight="40.0" prefWidth="214.0" visible="false">
          <children>
-            <Button fx:id="pos05" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos15" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos25" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos35" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos45" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Button fx:id="pos06" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos16" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos26" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos36" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos46" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="versuch7" layoutX="97.0" layoutY="345.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox id="versuch7" layoutX="97.0" layoutY="344.0" prefHeight="40.0" prefWidth="214.0" visible="false">
          <children>
-            <Button fx:id="pos06" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos16" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos26" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos36" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos46" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Button fx:id="pos07" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos17" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos27" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos37" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos47" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="versuch8" layoutX="97.0" layoutY="309.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox id="versuch8" layoutX="97.0" layoutY="304.0" prefHeight="40.0" prefWidth="214.0" visible="false">
          <children>
-            <Button fx:id="pos07" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos17" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos27" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos37" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos47" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Button fx:id="pos08" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos18" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos28" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos38" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos48" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="versuch9" layoutX="97.0" layoutY="272.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox id="versuch9" layoutX="97.0" layoutY="264.0" prefHeight="40.0" prefWidth="214.0" visible="false">
          <children>
-            <Button fx:id="pos08" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos18" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos28" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos38" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos48" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Button fx:id="pos09" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos19" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos29" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos39" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos49" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="versuch10" layoutX="97.0" layoutY="230.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox id="versuch10" layoutX="97.0" layoutY="224.0" prefHeight="40.0" prefWidth="214.0" visible="false">
          <children>
-            <Button fx:id="pos09" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos19" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos29" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos39" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos49" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Button fx:id="pos010" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos110" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos210" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos310" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos410" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="versuch11" layoutX="97.0" layoutY="194.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox id="versuch11" layoutX="97.0" layoutY="184.0" prefHeight="40.0" prefWidth="214.0" visible="false">
          <children>
-            <Button fx:id="pos010" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos110" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos210" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos310" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos410" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Button fx:id="pos011" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos111" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos211" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos311" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos411" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="versuch12" layoutX="97.0" layoutY="155.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox id="versuch12" layoutX="97.0" layoutY="144.0" prefHeight="40.0" prefWidth="214.0" visible="false">
          <children>
-            <Button fx:id="pos011" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos111" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos211" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos311" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos411" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Button fx:id="pos012" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos112" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos212" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos312" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="pos412" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="signal1" layoutX="826.0" layoutY="585.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox layoutX="548.0" layoutY="585.0" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <Button fx:id="pos012" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos112" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos212" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos312" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos412" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Label id="signal01" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal11" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal21" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal31" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal41" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="signal2" layoutX="826.0" layoutY="544.0" prefHeight="31.0" prefWidth="400.0" visible="false">
+      <HBox layoutX="548.0" layoutY="544.0" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <Button fx:id="pos013" disable="true" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" visible="false" />
-            <Button fx:id="pos113" disable="true" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" visible="false" />
-            <Button fx:id="pos213" disable="true" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" visible="false" />
-            <Button fx:id="pos313" disable="true" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" visible="false" />
-            <Button fx:id="pos413" disable="true" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" visible="false" />
+            <Label id="signal02" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal12" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal22" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal32" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal42" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="signal3" layoutX="826.0" layoutY="501.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox layoutX="548.0" layoutY="504.0" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <Button fx:id="pos014" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos114" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos214" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos314" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos414" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Label id="signal03" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal13" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal23" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal33" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal43" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="signal4" layoutX="826.0" layoutY="464.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox layoutX="548.0" layoutY="464.0" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <Button fx:id="pos015" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos115" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos215" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos315" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos415" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Label id="signal04" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal14" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal24" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal34" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal44" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="signal5" layoutX="826.0" layoutY="423.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox layoutX="548.0" layoutY="424.0" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <Button fx:id="pos016" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos116" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos216" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos316" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos416" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Label id="signal05" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal15" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal25" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal35" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal45" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="signal6" layoutX="826.0" layoutY="385.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox layoutX="548.0" layoutY="384.0" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <Button fx:id="pos017" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos117" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos217" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos317" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos417" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Label id="signal06" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal16" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal26" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal36" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal46" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="signal7" layoutX="826.0" layoutY="345.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox layoutX="548.0" layoutY="344.0" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <Button fx:id="pos018" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos118" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos218" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos318" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos418" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Label id="signal07" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal17" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal27" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal37" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal47" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="signal8" layoutX="826.0" layoutY="303.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox layoutX="548.0" layoutY="304.0" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <Button fx:id="pos019" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos119" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos219" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos319" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos419" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Label id="signal08" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal18" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal28" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal38" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal48" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="signal9" layoutX="826.0" layoutY="261.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox layoutX="548.0" layoutY="264.0" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <Button fx:id="pos020" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos120" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos220" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos320" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos420" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Label id="signal09" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal19" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal29" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal39" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal49" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="signal10" layoutX="826.0" layoutY="225.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox layoutX="548.0" layoutY="224.0" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <Button fx:id="pos021" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos121" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos221" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos321" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos421" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Label id="signal010" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal110" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal210" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal310" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal410" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <HBox id="signal11" layoutX="826.0" layoutY="186.0" prefHeight="30.0" prefWidth="400.0" visible="false">
+      <HBox layoutX="548.0" layoutY="184.0" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <Button fx:id="pos022" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="72.0" prefWidth="73.0" />
-            <Button fx:id="pos122" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="71.0" prefWidth="71.0" />
-            <Button fx:id="pos222" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="70.0" prefWidth="86.0" />
-            <Button fx:id="pos322" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="69.0" prefWidth="93.0" />
-            <Button fx:id="pos422" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="70.0" prefWidth="100.0" />
+            <Label id="signal011" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal111" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal211" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal311" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="signal411" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <Button layoutX="1020.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleZugBeendenVersuchAction" prefHeight="49.0" prefWidth="208.0" text="Zug Beenden" />
    </children>
 </Pane>
