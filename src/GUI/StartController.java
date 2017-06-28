@@ -3,14 +3,9 @@
  */
 package GUI;
 
-import java.awt.Toolkit;
-
 import MasterMind.*;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
@@ -22,6 +17,7 @@ public class StartController
     private static MasterMind masterMind;
     private static GUI gui = new GUI();
     private static Stage currentStage = new Stage();
+    private static Stage startStage = new Stage();
     private static Scene mastermindSetzen;
     private static Scene versuchscene;
     private static Scene zwischenVersuchScene;
@@ -65,16 +61,16 @@ public class StartController
     {
         zug = 1;
     	masterMind = new MasterMind();
-        Stage stage = (Stage) startButton.getScene().getWindow();
+        startStage = (Stage) startButton.getScene().getWindow();
         mastermindSetzen = gui.ladeMastermindSetzen();
         versuchscene = gui.ladeVersuchStage();
         zwischenVersuchScene = gui.ladeZwischenVersuchStage();
         signalScene = gui.ladeMastermindSignal();
         siegScene = gui.ladeSiegStage();
-        currentStage.setFullScreen(true);
         currentStage.setScene(mastermindSetzen);
+        startStage.close();
         currentStage.show();
-        stage.close();
+        currentStage.setFullScreen(true);
         Thread engine = new Thread(masterMind);
         engine.start();
     }

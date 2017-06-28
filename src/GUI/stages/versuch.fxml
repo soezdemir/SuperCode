@@ -7,7 +7,7 @@
 
 <Pane id="hauptpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/background.png); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-size: 1024px 768px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
    <children>
-      <Pane id="playPane" layoutX="14.0" layoutY="-2.0" prefHeight="790.0" prefWidth="507.0">
+      <Pane id="playPane" layoutX="14.0" layoutY="1.0" prefHeight="790.0" prefWidth="507.0">
          <children>
             <HBox id="versuch11" disable="true" layoutX="97.0" layoutY="63.0" prefHeight="60.0" prefWidth="300.0">
                <children>
@@ -131,7 +131,7 @@
             </HBox>
          </children>
       </Pane>
-      <Pane id="signalPane" layoutX="532.0" layoutY="-2.0" prefHeight="790.0" prefWidth="507.0">
+      <Pane id="signalPane" layoutX="532.0" layoutY="1.0" prefHeight="790.0" prefWidth="507.0">
          <children>
             <HBox layoutY="63.0" prefHeight="60.0" prefWidth="300.0">
                <children>
