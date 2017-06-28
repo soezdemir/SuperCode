@@ -4,7 +4,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/spielfiguren/bg-spielbrett-1024x768.png); -fx-background-size: 1024px 768px; -fx-background-repeat: no-repeat; -fx-background-position: center;"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/background/bg-spielbrett-1024x768.png); -fx-background-size: 1024px 768px; -fx-background-repeat: no-repeat; -fx-background-position: center;"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
    <children>
       <HBox layoutX="37.0" layoutY="634.0" prefHeight="40.0" prefWidth="320.0">
          <children>
@@ -20,11 +20,11 @@
       </HBox>
       <HBox id="versuch1" layoutX="97.0" layoutY="585.0" prefHeight="40.0" prefWidth="214.0">
          <children>
-            <Button fx:id="pos01" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button fx:id="pos11" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button fx:id="pos21" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button fx:id="pos31" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button fx:id="pos41" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button fx:id="pos01" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button fx:id="pos11" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button fx:id="pos21" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button fx:id="pos31" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button fx:id="pos41" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
          </children>
       </HBox>
       <HBox id="versuch2" layoutX="97.0" layoutY="544.0" prefHeight="40.0" prefWidth="200.0" visible="false">
@@ -36,7 +36,7 @@
             <Button fx:id="pos42" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
          </children>
       </HBox>
-      <Button layoutX="766.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleZugBeendenVersuchAction" prefHeight="49.0" prefWidth="208.0" text="Zug Beenden" />
+      <Button layoutX="750.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleZugBeendenVersuchAction" prefHeight="49.0" prefWidth="208.0" style="-fx-background-image: url(/graphics/buttons/nextturn.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 190px 45px;" />
       <HBox id="versuch3" layoutX="97.0" layoutY="504.0" prefHeight="40.0" prefWidth="214.0" visible="false">
          <children>
             <Button fx:id="pos03" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
