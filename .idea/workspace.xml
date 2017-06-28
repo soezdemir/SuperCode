@@ -2,23 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8398b61a-f27d-48ac-a844-72c14bd2aa85" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/graphics/buttons/GoOnButton.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/graphics/buttons/MenuQuitButton.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/graphics/buttons/MenuStartButton.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/graphics/spielbrett/MasterMindFeld.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/graphics/spielbrett/Signalfeld_Zeile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/graphics/spielbrett/Signalfeld_gesamt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/graphics/spielbrett/SignalstifteFeld.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/graphics/spielbrett/Spielbrett_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/graphics/spielbrett/Spielbrett_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/graphics/spielbrett/Spielfeld_Zeile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/graphics/spielbrett/Spielfeld_gesamt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/buttons/GoOnButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/buttons/MenuQuitButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/buttons/MenuStartButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/menu/MasterMindStartbild_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/menu/MasterMindStartbild_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielbrett/FarbfigurenFeld.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielbrett/MasterMindFeld.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielbrett/Signalfeld_Zeile.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielbrett/Signalfeld_gesamt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielbrett/SignalstifteFeld.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielbrett/Spielbrett_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielbrett/Spielbrett_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielbrett/Spielbrett_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielbrett/Spielfeld_Zeile.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielbrett/Spielfeld_gesamt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielfiguren/blau.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielfiguren/gelb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielfiguren/gruen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielfiguren/hellgruen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielfiguren/lila.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielfiguren/orange.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielfiguren/pink.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielfiguren/rot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielfiguren/schwarz.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielfiguren/schwarz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielfiguren/weiss.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics/spielfiguren/weiss.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/graphics/bg-start-screen.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/stages/masterSignal.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/masterSignal.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/mastermindSetzen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/stages/sieg.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/sieg.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/stages/startbild.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/startbild.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/stages/versuch.fxml" afterPath="$PROJECT_DIR$/src/GUI/stages/versuch.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -231,10 +243,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MasterMind" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -293,32 +301,6 @@
               <option name="myItemId" value="graphics" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spielfiguren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SuperCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SuperCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="graphics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -339,28 +321,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="buttons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SuperCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SuperCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="graphics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="background" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -628,12 +588,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498596120300</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[#] FXMLs angepasst&#10;[#] Neuer Startbildschirm">
+      <created>1498642618004</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1498642618004</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1052" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -650,7 +616,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1703125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1703125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -670,7 +636,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[#] Neue Graphiken eingefuegt" />
-    <option name="LAST_COMMIT_MESSAGE" value="[#] Neue Graphiken eingefuegt" />
+    <MESSAGE value="[#] FXMLs angepasst&#10;[#] Neuer Startbildschirm" />
+    <option name="LAST_COMMIT_MESSAGE" value="[#] FXMLs angepasst&#10;[#] Neuer Startbildschirm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
