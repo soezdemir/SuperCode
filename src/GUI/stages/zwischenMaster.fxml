@@ -4,8 +4,8 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
+<Pane id="hauptpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/background.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 1024px 768px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
    <children>
-      <Button layoutX="606.0" layoutY="512.0" mnemonicParsing="false" onAction="#handleWeiterMasterAction" style="-fx-background-image: url(/graphics/menu/MasterMindStartbild_.png);" text="Continue" />
+      <Button layoutX="537.0" layoutY="512.0" mnemonicParsing="false" onAction="#handleWeiterMasterAction" prefHeight="100.0" prefWidth="200.0" style="-fx-background-image: url(/graphics/buttons/weiter.png);" />
    </children>
 </Pane>

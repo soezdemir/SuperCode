@@ -1,230 +1,242 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/background/bg-spielbrett-1024x768.png); -fx-background-size: 1024px 768px; -fx-background-repeat: no-repeat; -fx-background-position: center;"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
+<Pane id="hauptpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/background.png); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-size: 1024px 768px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
    <children>
-      <HBox layoutX="37.0" layoutY="634.0" prefHeight="40.0" prefWidth="320.0">
+      <Pane id="playPane" layoutX="14.0" layoutY="-2.0" prefHeight="790.0" prefWidth="507.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleRotAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/rot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button mnemonicParsing="false" onAction="#handlePinkAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/pink.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button mnemonicParsing="false" onAction="#handleOrangeAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/orange.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button mnemonicParsing="false" onAction="#handleLilaAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/lila.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button mnemonicParsing="false" onAction="#handleHellgruenAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/hellgruen.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button mnemonicParsing="false" onAction="#handleGelbAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/gelb.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button mnemonicParsing="false" onAction="#handleGruenAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/gruen.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button mnemonicParsing="false" onAction="#handleBlauAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/blau.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <HBox id="versuch11" disable="true" layoutX="97.0" layoutY="63.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="pos011" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos111" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos211" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos311" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos411" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox id="versuch9" disable="true" layoutX="97.0" layoutY="183.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="pos09" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos19" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos29" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos39" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos49" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox id="versuch8" disable="true" layoutX="97.0" layoutY="243.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="pos08" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos18" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos28" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos38" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos48" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox id="versuch5" disable="true" layoutX="97.0" layoutY="423.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="pos05" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos15" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos25" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos35" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos45" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="723.0" prefHeight="60.0" prefWidth="480.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleRotAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/rot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button mnemonicParsing="false" onAction="#handlePinkAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/pink.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button mnemonicParsing="false" onAction="#handleOrangeAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/orange.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button mnemonicParsing="false" onAction="#handleLilaAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/lila.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button mnemonicParsing="false" onAction="#handleHellgruenAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/hellgruen.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button mnemonicParsing="false" onAction="#handleGelbAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/gelb.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button mnemonicParsing="false" onAction="#handleGruenAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/gruen.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button mnemonicParsing="false" onAction="#handleBlauAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/blau.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox id="versuch1" layoutX="97.0" layoutY="663.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="pos01" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos11" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos21" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos31" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos41" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox id="versuch2" disable="true" layoutX="96.0" layoutY="603.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="pos02" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos12" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos22" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos32" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos42" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox id="versuch3" disable="true" layoutX="96.0" layoutY="543.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="pos03" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos13" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos23" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos33" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos43" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox id="versuch4" disable="true" layoutX="97.0" layoutY="483.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="pos04" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos14" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos24" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos34" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos44" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox id="versuch6" disable="true" layoutX="97.0" layoutY="363.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="pos06" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos16" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos26" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos36" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos46" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox id="versuch7" disable="true" layoutX="97.0" layoutY="303.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="pos07" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos17" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos27" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos37" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos47" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox id="versuch10" disable="true" layoutX="97.0" layoutY="123.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="pos010" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos110" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos210" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos310" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos410" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox id="versuch12" disable="true" layoutX="97.0" layoutY="3.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="pos012" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos112" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos212" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos312" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Button fx:id="pos412" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
          </children>
-      </HBox>
-      <HBox id="versuch1" layoutX="97.0" layoutY="585.0" prefHeight="40.0" prefWidth="214.0">
+      </Pane>
+      <Pane id="signalPane" layoutX="532.0" layoutY="-2.0" prefHeight="790.0" prefWidth="507.0">
          <children>
-            <Button fx:id="pos01" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button fx:id="pos11" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button fx:id="pos21" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button fx:id="pos31" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button fx:id="pos41" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-spieler-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <HBox layoutY="63.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Label id="signal011" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal111" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal211" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal311" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal411" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox layoutY="123.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Label id="signal010" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal110" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal210" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal310" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal410" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox layoutY="183.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Label id="signal09" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal19" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal29" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal39" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal49" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox layoutY="243.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Label id="signal08" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal18" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal28" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal38" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal48" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox layoutY="483.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Label id="signal04" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal14" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal24" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal34" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal44" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox layoutY="603.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Label id="signal02" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal12" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal22" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal32" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal42" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox layoutY="663.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Label id="signal01" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal11" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal21" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal31" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal41" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox layoutY="543.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Label id="signal03" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal13" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal23" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal33" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal43" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox layoutY="423.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Label id="signal05" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal15" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal25" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal35" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal45" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox layoutY="363.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Label id="signal06" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal16" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal26" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal36" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal46" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
+            <HBox layoutY="303.0" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Label id="signal07" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal17" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal27" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal37" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+                  <Label id="signal47" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+               </children>
+            </HBox>
          </children>
-      </HBox>
-      <HBox id="versuch2" layoutX="97.0" layoutY="544.0" prefHeight="40.0" prefWidth="200.0" visible="false">
-         <children>
-            <Button fx:id="pos02" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos12" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos22" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos32" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos42" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <Button layoutX="750.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleZugBeendenVersuchAction" prefHeight="49.0" prefWidth="208.0" style="-fx-background-image: url(/graphics/buttons/nextturn.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 190px 45px;" />
-      <HBox id="versuch3" layoutX="97.0" layoutY="504.0" prefHeight="40.0" prefWidth="214.0" visible="false">
-         <children>
-            <Button fx:id="pos03" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos13" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos23" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos33" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos43" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox id="versuch4" layoutX="97.0" layoutY="464.0" prefHeight="40.0" prefWidth="214.0" visible="false">
-         <children>
-            <Button fx:id="pos04" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos14" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos24" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos34" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos44" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox id="versuch5" layoutX="97.0" layoutY="424.0" prefHeight="40.0" prefWidth="214.0" visible="false">
-         <children>
-            <Button fx:id="pos05" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos15" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos25" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos35" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos45" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox id="versuch6" layoutX="97.0" layoutY="384.0" prefHeight="40.0" prefWidth="214.0" visible="false">
-         <children>
-            <Button fx:id="pos06" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos16" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos26" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos36" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos46" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox id="versuch7" layoutX="97.0" layoutY="344.0" prefHeight="40.0" prefWidth="214.0" visible="false">
-         <children>
-            <Button fx:id="pos07" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos17" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos27" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos37" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos47" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox id="versuch8" layoutX="97.0" layoutY="304.0" prefHeight="40.0" prefWidth="214.0" visible="false">
-         <children>
-            <Button fx:id="pos08" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos18" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos28" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos38" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos48" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox id="versuch9" layoutX="97.0" layoutY="264.0" prefHeight="40.0" prefWidth="214.0" visible="false">
-         <children>
-            <Button fx:id="pos09" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos19" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos29" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos39" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos49" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox id="versuch10" layoutX="97.0" layoutY="224.0" prefHeight="40.0" prefWidth="214.0" visible="false">
-         <children>
-            <Button fx:id="pos010" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos110" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos210" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos310" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos410" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox id="versuch11" layoutX="97.0" layoutY="184.0" prefHeight="40.0" prefWidth="214.0" visible="false">
-         <children>
-            <Button fx:id="pos011" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos111" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos211" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos311" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos411" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox id="versuch12" layoutX="97.0" layoutY="144.0" prefHeight="40.0" prefWidth="214.0" visible="false">
-         <children>
-            <Button fx:id="pos012" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos112" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos212" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos312" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" />
-            <Button fx:id="pos412" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox layoutX="548.0" layoutY="585.0" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <Label id="signal01" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal11" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal21" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal31" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal41" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox layoutX="548.0" layoutY="544.0" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <Label id="signal02" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal12" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal22" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal32" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal42" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox layoutX="548.0" layoutY="504.0" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <Label id="signal03" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal13" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal23" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal33" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal43" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox layoutX="548.0" layoutY="464.0" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <Label id="signal04" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal14" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal24" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal34" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal44" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox layoutX="548.0" layoutY="424.0" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <Label id="signal05" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal15" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal25" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal35" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal45" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox layoutX="548.0" layoutY="384.0" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <Label id="signal06" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal16" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal26" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal36" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal46" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox layoutX="548.0" layoutY="344.0" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <Label id="signal07" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal17" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal27" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal37" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal47" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox layoutX="548.0" layoutY="304.0" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <Label id="signal08" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal18" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal28" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal38" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal48" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox layoutX="548.0" layoutY="264.0" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <Label id="signal09" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal19" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal29" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal39" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal49" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox layoutX="548.0" layoutY="224.0" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <Label id="signal010" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal110" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal210" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal310" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal410" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
-      <HBox layoutX="548.0" layoutY="184.0" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <Label id="signal011" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal111" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal211" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal311" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="signal411" prefHeight="40.0" prefWidth="40.0" />
-         </children>
-      </HBox>
+      </Pane>
+      <Button id="zugBeenden" blendMode="DARKEN" layoutX="810.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleZugBeendenVersuchAction" prefHeight="100.0" prefWidth="200.0" text="End Turn">
+         <font>
+            <Font name="Arial Bold Italic" size="20.0" />
+         </font></Button>
    </children>
 </Pane>

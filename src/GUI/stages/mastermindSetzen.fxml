@@ -1,33 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/background/bg-spielbrett-1024x768.png); -fx-background-size: 1024px 768px; -fx-background-repeat: no-repeat; -fx-background-position: center;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
+<Pane id="hauptpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/background.png); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-size: 1024px 768px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
    <children>
-      <HBox layoutX="448.0" layoutY="272.0" prefHeight="41.0" prefWidth="201.0">
+      <HBox id="setzFeld" layoutX="396.0" layoutY="290.0" prefHeight="60.0" prefWidth="300.0">
          <children>
-            <Button fx:id="pos0" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-mastermind-slot.png); -fx-background-size: 40px 40px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
-            <Button fx:id="pos1" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-mastermind-slot.png); -fx-background-size: 40px 40px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
-            <Button fx:id="pos2" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-mastermind-slot.png); -fx-background-size: 40px 40px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
-            <Button fx:id="pos3" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-mastermind-slot.png); -fx-background-size: 40px 40px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
-            <Button fx:id="pos4" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-mastermind-slot.png); -fx-background-size: 40px 40px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
+            <Button fx:id="pos0" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-mastermind-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+            <Button fx:id="pos1" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-mastermind-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+            <Button fx:id="pos2" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-mastermind-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+            <Button fx:id="pos3" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-mastermind-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+            <Button fx:id="pos4" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-mastermind-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
          </children>
       </HBox>
-      <Button layoutX="864.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleZugBeendenInitialAction" text="Zug Beenden" />
-      <HBox layoutX="388.0" layoutY="371.0" prefHeight="41.0" prefWidth="321.0">
+      <Button id="zugBeenden" alignment="TOP_CENTER" blendMode="DARKEN" layoutX="793.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleZugBeendenInitialAction" prefHeight="46.0" prefWidth="200.0" text="End Turn" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold Italic" size="20.0" />
+         </font></Button>
+      <HBox id="farbFeld" blendMode="SRC_ATOP" layoutX="306.0" layoutY="365.0" prefHeight="60.0" prefWidth="480.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleRotAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/rot.png); -fx-background-size: 40px 40px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
-            <Button mnemonicParsing="false" onAction="#handlePinkAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/pink.png); -fx-background-size: 40px 40px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
-            <Button mnemonicParsing="false" onAction="#handleOrangeAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/orange.png); -fx-background-size: 40px 40px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
-            <Button mnemonicParsing="false" onAction="#handleLilaAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/lila.png); -fx-background-size: 40px 40px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
-            <Button mnemonicParsing="false" onAction="#handleHellgruenAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/hellgruen.png); -fx-background-size: 40px 40px; -fx-background-position: no-repeat; -fx-background-position: center;" />
-            <Button mnemonicParsing="false" onAction="#handleGelbAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/gelb.png); -fx-background-size: 40px 40px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
-            <Button mnemonicParsing="false" onAction="#handleGruenAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/gruen.png); -fx-background-size: 40px 40px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
-            <Button mnemonicParsing="false" onAction="#handleBlauAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/spielfiguren/blau.png); -fx-background-size: 40px 40px; -fx-background-position: center; -fx-background-repeat: no-repeat;" />
+            <Button mnemonicParsing="false" onAction="#handleRotAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/rot.png); -fx-background-size: 60px 60px; -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-border-image-source: url(/graphics/Spielfigur_SlotBackground_Einzel.png);">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Button>
+            <Button mnemonicParsing="false" onAction="#handlePinkAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/pink.png); -fx-background-size: 60px 60px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
+            <Button mnemonicParsing="false" onAction="#handleOrangeAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/orange.png); -fx-background-size: 60px 60px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
+            <Button mnemonicParsing="false" onAction="#handleLilaAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/lila.png); -fx-background-size: 60px 60px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
+            <Button mnemonicParsing="false" onAction="#handleHellgruenAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/hellgruen.png); -fx-background-size: 60px 60px; -fx-background-position: no-repeat; -fx-background-position: center;" />
+            <Button mnemonicParsing="false" onAction="#handleGelbAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/gelb.png); -fx-background-size: 60px 60px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
+            <Button mnemonicParsing="false" onAction="#handleGruenAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/gruen.png); -fx-background-size: 60px 60px; -fx-background-repeat: no-repeat; -fx-background-position: center;" />
+            <Button mnemonicParsing="false" onAction="#handleBlauAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/blau.png); -fx-background-size: 60px 60px; -fx-background-position: center; -fx-background-repeat: no-repeat;" />
          </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
       </HBox>
    </children>
 </Pane>

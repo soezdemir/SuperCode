@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/spielfiguren/bg-player-win.png); -fx-background-size: 1024px 768px; -fx-background-repeat: no-repeat; -fx-background-position: center;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
+<Pane id="hauptpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
    <children>
-      <Button fx:id="startButton" layoutX="83.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleStartButtonAction" text="Start" />
-      <Button layoutX="440.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleQuitButtonAction" text="Quit" />
+      <Button id="start" fx:id="startButton" blendMode="COLOR_BURN" layoutX="214.0" layoutY="548.0" mnemonicParsing="false" onAction="#handleStartButtonAction" text="Start">
+         <font>
+            <Font name="Arial Bold Italic" size="28.0" />
+         </font></Button>
+      <Button id="quit" blendMode="COLOR_BURN" layoutX="744.0" layoutY="548.0" mnemonicParsing="false" onAction="#handleQuitButtonAction" text="Quit">
+         <font>
+            <Font name="Arial Bold Italic" size="28.0" />
+         </font></Button>
    </children>
 </Pane>

@@ -2,19 +2,12 @@
  * Created by Noctis on 24.05.2017.
  */
 package MasterMind;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+
 
 
 // Klasse die den Spielfluss bestimmt
 public class MasterMind implements Runnable
 {
-    private static final int SPIELERMASTER = 1;
-    private static final int VERSUCHSSPIELER = 0;
-    private static final int ZUGBEENDEN = 2;
-    private static final int SPIELBEENDEN = 1;
-
     public Spielbrett getSpielbrett() {
         return spielbrett;
     }
@@ -111,39 +104,7 @@ public class MasterMind implements Runnable
         }
         //regeln = new MasterMind.MasterMindRegeln();
     }
-    //Abfrage ob die Runde oder das Spiel beendet werden soll, je nach Situation
-    private void spielBeenden(int fall, int spieler)
-    {
-        BufferedReader eingabe = new BufferedReader(new InputStreamReader(System.in));
-        try
-        {
-            switch(fall)
-            {
-                case SPIELBEENDEN:
-                    System.out.print("Moechten Sie das Spiel beenden?(y/n) ");
-                    if(eingabe.readLine().contains("y"))
-                        System.exit(0);
-                    siegBedingung = false;
-                    versuche = 0;
-                    break;
-                case ZUGBEENDEN:
-                    feldStatus = spielbrett.pruefeVersuchsOderMasterFeld(spieler);
-                    if(!feldStatus)
-                    {
-                        System.out.print("Moechten Sie Ihren Zug beenden?(y/n) ");
-                        if(eingabe.readLine().contains("y"))
-                            zugBeenden = true;
-                    }
-                    break;
-            }
-        }
-        catch(IOException ioe)
-        {
-            ioe.printStackTrace();
-        }
-    }
-
-    //Belege tippfeld, die Runde kann erst beendet werden wenn das Feld richtig gesetzt wurde
+   //Belege tippfeld, die Runde kann erst beendet werden wenn das Feld richtig gesetzt wurde
     private void setzeTippFeld()
     {
         try{
@@ -258,30 +219,6 @@ public class MasterMind implements Runnable
         	spielbrett.setTipp(new TippFeld());
         	spielbrett.setVersuch(new VersuchsFeld());
         }
-        //setzeTippFeld();
-        //while(true)
-        //{
-            //gui.zeichneSpielbrett();
-            /*setzeMasterMind();
-            while (!siegBedingung && versuche < 11)
-            {
-                setzeVersuchsFeld();
-                setzeTippFeld();
-                pruefeSiegBedingung();
-                versuche++;
-                spielbrett.setTipp(new TippFeld());
-            }
-            spielbrett = new Spielbrett();
-            spielBeenden(SPIELBEENDEN, SPIELERMASTER);
-        }*/
     }
-    /*public static void main(String args[]) {
-        try {
-            MasterMind spielSitzung = new MasterMind();
-            spielSitzung.spielen();
-        }catch(Exception e){
-            e.printStackTrace();
-            System.out.println(e.getMessage());
-        }
-    }*/
+    
 }

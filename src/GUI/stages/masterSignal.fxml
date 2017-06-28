@@ -1,46 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/background/bg-spielbrett-1024x768.png); -fx-background-size: 1024px 768px; -fx-background-repeat: no-repeat; -fx-background-position: center;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
+<Pane id="hauptpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/background.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 1024px 768px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
    <children>
-      <HBox layoutX="472.0" layoutY="429.0" prefHeight="40.0" prefWidth="80.0">
+      <HBox id="farbFeld" layoutX="475.0" layoutY="432.0" prefHeight="60.0" prefWidth="120.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleSchwarzAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/schwarz.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 50px 50px;" />
-            <Button mnemonicParsing="false" onAction="#handleWeissAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/weiss.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 50px 50px;" />
+            <Button mnemonicParsing="false" onAction="#handleSchwarzAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/schwarz.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+            <Button mnemonicParsing="false" onAction="#handleWeissAction" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/spielfiguren/weiss.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
          </children>
       </HBox>
-      <HBox layoutX="412.0" layoutY="338.0" prefHeight="40.0" prefWidth="200.0">
+      <HBox id="setzFeld" layoutX="385.0" layoutY="337.0" prefHeight="60.0" prefWidth="300.0">
          <children>
-            <Button fx:id="signal0" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button fx:id="signal1" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button fx:id="signal2" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button fx:id="signal3" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
-            <Button fx:id="signal4" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 40px 40px;" />
+            <Button fx:id="signal0" mnemonicParsing="false" onAction="#handlePos0Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+            <Button fx:id="signal1" mnemonicParsing="false" onAction="#handlePos1Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+            <Button fx:id="signal2" mnemonicParsing="false" onAction="#handlePos2Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+            <Button fx:id="signal3" mnemonicParsing="false" onAction="#handlePos3Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
+            <Button fx:id="signal4" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
          </children>
       </HBox>
-      <HBox layoutX="412.0" layoutY="87.0" prefHeight="40.0" prefWidth="200.0">
+      <HBox id="masterFeld" layoutX="385.0" layoutY="87.0" prefHeight="60.0" prefWidth="300.0">
          <children>
-            <Label id="master0" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="master1" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="master2" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="master3" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="master4" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="master0" prefHeight="60.0" prefWidth="60.0" />
+            <Label id="master1" prefHeight="60.0" prefWidth="60.0" />
+            <Label id="master2" prefHeight="60.0" prefWidth="60.0" />
+            <Label id="master3" prefHeight="60.0" prefWidth="60.0" />
+            <Label id="master4" prefHeight="60.0" prefWidth="60.0" />
          </children>
       </HBox>
-      <HBox layoutX="412.0" layoutY="127.0" prefHeight="40.0" prefWidth="200.0">
+      <HBox id="versuchFeld" layoutX="385.0" layoutY="147.0" prefHeight="60.0" prefWidth="300.0">
          <children>
-            <Label id="versuch0" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="versuch1" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="versuch2" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="versuch3" prefHeight="40.0" prefWidth="40.0" />
-            <Label id="versuch4" prefHeight="40.0" prefWidth="40.0" />
+            <Label id="versuch0" prefHeight="60.0" prefWidth="60.0" />
+            <Label id="versuch1" prefHeight="60.0" prefWidth="60.0" />
+            <Label id="versuch2" prefHeight="60.0" prefWidth="60.0" />
+            <Label id="versuch3" prefHeight="60.0" prefWidth="60.0" />
+            <Label id="versuch4" prefHeight="60.0" prefWidth="60.0" />
          </children>
       </HBox>
-      <Button layoutX="886.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleZugBeendenMasterAction" text="Zug Beenden" />
-      <Button layoutX="582.0" layoutY="437.0" mnemonicParsing="false" onAction="#handleGrauAction" text="Löschen" />
+      <Button id="zugBeenden" blendMode="DARKEN" layoutX="793.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleZugBeendenMasterAction" prefHeight="100.0" prefWidth="200.0" text="End Turn" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold Italic" size="20.0" />
+         </font></Button>
+      <Button id="loeschen" blendMode="COLOR_BURN" layoutX="706.0" layoutY="437.0" mnemonicParsing="false" onAction="#handleGrauAction" prefHeight="50.0" prefWidth="100.0" style="-fx-background-image: url(/graphics/buttons/reset.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 100px 50px;" />
+      <Text id="masterTextField" layoutX="245.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MasterMind">
+         <font>
+            <Font name="Arial Bold Italic" size="24.0" />
+         </font>
+      </Text>
    </children>
 </Pane>
