@@ -169,8 +169,8 @@ public class StartController
         	}
         	else
         		zeichneNeu(source, masterMind.getPosition());
+            masterMind.setPositionGedrueckt(true);
         }
-        masterMind.setPositionGedrueckt(true);
     }
 
     @FXML protected void handlePos1Action(ActionEvent event)
@@ -185,8 +185,8 @@ public class StartController
         	}
         	else
         		zeichneNeu(source, masterMind.getPosition());
+            masterMind.setPositionGedrueckt(true);
         }
-        masterMind.setPositionGedrueckt(true);
     }
 
     @FXML protected void handlePos2Action(ActionEvent event)
@@ -201,8 +201,8 @@ public class StartController
         	}
         	else
         		zeichneNeu(source, masterMind.getPosition());
+            masterMind.setPositionGedrueckt(true);
         }
-        masterMind.setPositionGedrueckt(true);
     }
 
     @FXML protected void handlePos3Action(ActionEvent event)
@@ -217,8 +217,8 @@ public class StartController
         	}
         	else
         		zeichneNeu(source, masterMind.getPosition());
+            masterMind.setPositionGedrueckt(true);
         }
-        masterMind.setPositionGedrueckt(true);
     }
 
     @FXML protected void handlePos4Action(ActionEvent event)
@@ -233,8 +233,8 @@ public class StartController
         	}
         	else
         		zeichneNeu(source, masterMind.getPosition());
+            masterMind.setPositionGedrueckt(true);
         }
-        masterMind.setPositionGedrueckt(true);
     }
 
     @FXML protected void handleZugBeendenInitialAction(ActionEvent event)throws Exception
