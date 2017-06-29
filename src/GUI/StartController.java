@@ -55,7 +55,7 @@ public class StartController
     private static final String MASTER = "#master";
     private static final String VERSUCH = "#versuch";
     private static final String SIGNAL = "#signal";
-    private static final String SIEGMASTERMIND = BACKGROUND+HINTERGRUNDPFAD+"MasterMindWins_Background"+BILDDATEIENDUNG;
+    private static final String SIEGMASTERMIND = BACKGROUND+HINTERGRUNDPFAD+"bg-mastermind-win"+BILDDATEIENDUNG;
     private static final String SIGNALBACKGROUND = BACKGROUND+HINTERGRUNDPFAD+"bg-signal-slot"+BILDDATEIENDUNG;
 
     @FXML protected void handleStartButtonAction(ActionEvent event)throws Exception
@@ -280,19 +280,18 @@ public class StartController
             Thread.sleep(2);
             if(masterMind.isSiegBedingung())
             {
-            	currentStage.setScene(siegScene);;
+            	currentStage.setScene(siegScene);
             }
-            //TODO verlierstage einrichten
             else if(zug == 12)
             {
-            	siegScene.lookup("#hauptpane").setStyle(SIEGMASTERMIND+NOREPEAT+BACKGROUNDIMAGEPOSITION);
+            	siegScene.lookup("#hauptpane").setStyle(SIEGMASTERMIND+NOREPEAT+BACKGROUNDIMAGEPOSITION+
+                    BACKGROUND+"size: "+Double.toString(GUI.BACKGROUNDBREITE)+"px "+Double.toString(GUI.BACKGROUNDHOEHE)+"px");
             	currentStage.setScene(siegScene);
             }
             else
             	currentStage.setScene(zwischenVersuchScene);
             zug++;
             currentStage.setFullScreen(true);
-            //zugS = Integer.toString(zug);
         }
     }
 
