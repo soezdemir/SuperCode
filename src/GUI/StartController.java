@@ -7,6 +7,7 @@ import MasterMind.*;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 
@@ -71,6 +72,7 @@ public class StartController
         startStage.close();
         currentStage.show();
         currentStage.setFullScreen(true);
+        currentStage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         Thread engine = new Thread(masterMind);
         engine.start();
     }

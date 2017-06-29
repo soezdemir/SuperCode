@@ -12,6 +12,7 @@ public class GUI extends Application
     private static final double BACKGROUNDBREITE = Toolkit.getDefaultToolkit().getScreenSize().width;
     private static final double BACKGROUNDHOEHE = Toolkit.getDefaultToolkit().getScreenSize().height;
     private static final double DISPLAYBREITE = 1024;
+    private static final double VERSUCHHOEHE = 790;
     private static final double DISPLAYHOEHE = 768;
     private static final double QUOTIENTBREITE = BACKGROUNDBREITE/DISPLAYBREITE;
     private static final double QUOTIENTHOEHE = BACKGROUNDHOEHE/DISPLAYHOEHE;
@@ -111,13 +112,13 @@ public class GUI extends Application
         scene.lookup(PLAYPANE).prefWidth(QUOTIENTBREITE*507);
         scene.lookup(PLAYPANE).prefHeight(QUOTIENTHOEHE*790);
         scene.lookup(PLAYPANE).setLayoutX((14/DISPLAYBREITE)*BACKGROUNDBREITE);
-        scene.lookup(PLAYPANE).setLayoutY((1/DISPLAYHOEHE)*BACKGROUNDHOEHE);
+        scene.lookup(PLAYPANE).setLayoutY((1/VERSUCHHOEHE)*BACKGROUNDHOEHE);
         scene.lookup(SIGNALPANE).prefWidth(QUOTIENTBREITE*507);
         scene.lookup(SIGNALPANE).prefHeight(QUOTIENTHOEHE*790);
         scene.lookup(SIGNALPANE).setLayoutX((532/DISPLAYBREITE)*BACKGROUNDBREITE);
-        scene.lookup(SIGNALPANE).setLayoutY((1/DISPLAYHOEHE)*BACKGROUNDHOEHE);
+        scene.lookup(SIGNALPANE).setLayoutY((1/VERSUCHHOEHE)*BACKGROUNDHOEHE);
         scene.lookup(ZUGBEENDEN).setLayoutX((793/DISPLAYBREITE)*BACKGROUNDBREITE);
-        scene.lookup(ZUGBEENDEN).setLayoutY((32/DISPLAYHOEHE)*BACKGROUNDHOEHE);
+        scene.lookup(ZUGBEENDEN).setLayoutY((32/VERSUCHHOEHE)*BACKGROUNDHOEHE);
     }
 
     private void signalSceneAufloesung(Scene scene)

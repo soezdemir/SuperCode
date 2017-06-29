@@ -118,6 +118,9 @@ public class MasterMind implements Runnable
                 spielbrett.getTipp().setzeSpielfigur(position, new Spielfigur(farbe));
                 farbeGedrueckt = false;
                 positionGedrueckt = false;
+                for(int i = 0; i < 5; i++)
+                    System.out.println("Signal "+versuche+": Position"+i+": "+
+                        Integer.toHexString(spielbrett.getTipp().figuren[i].getFarbe()));
             }
                 /*System.out.println("Versuch Feld: Position: "+position+" Farbe: "+
                         spielbrett.getVersuch().figuren[position].getFarbe());*/
@@ -129,7 +132,7 @@ public class MasterMind implements Runnable
      }
     }
     //preuft ob das Versuchs Feld dem Master Feld entspricht, also ob die Sieg Bedingung erfuellt ist
-    private void pruefeSiegBedingung()
+    private boolean pruefeSiegBedingung()
     {
         //System.out.println("Siegbedingung");
         for(int i = 0; i < spielbrett.getVersuch().figuren.length; i++)
@@ -138,10 +141,11 @@ public class MasterMind implements Runnable
             {
                 //System.out.println("SiegBedingung nicht erfuellt");
                 siegBedingung = false;
-                return;
+                return false;
             }
         }
         siegBedingung = true;
+        return true;
     }
     //Setzen des Versuchsfeldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
     private void setzeVersuchsFeld()
@@ -159,7 +163,8 @@ public class MasterMind implements Runnable
                 positionGedrueckt = false;
                 for(int i = 0; i < 5; i++)
                 {
-                    System.out.println("Position"+i+": "+Integer.toHexString(spielbrett.getMaster().figuren[i].getFarbe()));
+                    System.out.println("Versuch "+versuche+": Position"+i+": "+
+                            Integer.toHexString(spielbrett.getVersuch().figuren[i].getFarbe()));
                 }
             }
                 /*System.out.println("Versuch Feld: Position: "+position+" Farbe: "+
@@ -190,7 +195,7 @@ public class MasterMind implements Runnable
                 positionGedrueckt = false;
                 for(int i = 0; i < 5; i++)
                 {
-                    System.out.println("Position"+i+": "+Integer.toHexString(spielbrett.getMaster().figuren[i].getFarbe()));
+                    System.out.println("MasterMind: Position"+i+": "+Integer.toHexString(spielbrett.getMaster().figuren[i].getFarbe()));
                 }
             }
             feldStatus = spielbrett.getMaster().pruefeFeldAufGesetzt();
@@ -208,14 +213,13 @@ public class MasterMind implements Runnable
     //Frage ob Spiel beendet werden soll oder weiter gespielt werden soll
     public void run()
     {
-        
         setzeMasterMind();
-        while(versuche < 11 || !siegBedingung)
+        while(versuche < 11 && !siegBedingung)
         {
         	setzeVersuchsFeld();
-            pruefeSiegBedingung();
-        	setzeTippFeld();
-        	versuche++;
+            if(!pruefeSiegBedingung())
+                setzeTippFeld();
+            versuche++;
         	spielbrett.setTipp(new TippFeld());
         	spielbrett.setVersuch(new VersuchsFeld());
         }
