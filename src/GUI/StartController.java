@@ -1,6 +1,7 @@
 /**
- * Created by Noctis on 20.06.2017.
+ * Created by cpatzek & soezdemir 17/05/2017.
  */
+
 package GUI;
 
 import MasterMind.*;

@@ -1,3 +1,8 @@
+/**
+ * Created by cpatzek & soezdemir 17/05/2017.
+ */
+
+
 package MasterMind;
 import java.util.Random;
 

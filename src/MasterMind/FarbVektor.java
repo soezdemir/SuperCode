@@ -1,9 +1,11 @@
+/**
+ * Created by cpatzek & soezdemir 17/05/2017.
+ */
+
+
 package MasterMind;
 import java.util.Vector;
 
-/**
- * Created by Noctis on 31.05.2017.
- */
 
 //Dies war eine Testklasse fuer die Pruefung des Tippfeldes. Deprecated
 public class FarbVektor

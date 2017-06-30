@@ -1,5 +1,5 @@
 /**
- * Created by Christian Patzek & Sadri Oezdemir on 17/05/2017.
+ * Created by cpatzek & soezdemir 17/05/2017.
  */
 package MasterMind;
 /*

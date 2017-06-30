@@ -1,6 +1,8 @@
 /**
- * Created by Noctis on 24.05.2017.
+ * Created by cpatzek & soezdemir 17/05/2017.
  */
+
+
 package MasterMind;
 
 

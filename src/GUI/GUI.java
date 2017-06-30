@@ -1,3 +1,7 @@
+/**
+ * Created by cpatzek & soezdemir 17/05/2017.
+ */
+
 package GUI;
 
 import javafx.application.Application;
@@ -152,9 +156,9 @@ public class GUI extends Application
         scene.lookup(HAUPTPANE).setStyle(SIEGSPIELER+StartController.getNOREPEAT()+StartController.getBACKGROUNDIMAGEPOSITION()
                 +BACKGROUNDDIMENSION);
         scene.lookup(START).setLayoutX((214/DISPLAYBREITE)*BACKGROUNDBREITE);
-        scene.lookup(START).setLayoutY((548/DISPLAYHOEHE)*BACKGROUNDHOEHE);
-        scene.lookup(QUIT).setLayoutX((744/DISPLAYBREITE)*BACKGROUNDBREITE);
-        scene.lookup(QUIT).setLayoutY((548/DISPLAYHOEHE)*BACKGROUNDHOEHE);
+        scene.lookup(START).setLayoutY((348/DISPLAYHOEHE)*BACKGROUNDHOEHE);
+        scene.lookup(QUIT).setLayoutX((684/DISPLAYBREITE)*BACKGROUNDBREITE);
+        scene.lookup(QUIT).setLayoutY((348/DISPLAYHOEHE)*BACKGROUNDHOEHE);
     }
     @Override public void stop()
     {

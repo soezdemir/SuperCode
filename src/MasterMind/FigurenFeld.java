@@ -1,8 +1,10 @@
+/**
+ * Created by cpatzek & soezdemir 17/05/2017.
+ */
+
+
 package MasterMind;
 
-/**
- * Created by cpatzek & soezdemir  17/05/2017.
- */
 //Feld das alle Spielfiguren und Ihre Farben haelt zur Auswahl in der GUI
 public class FigurenFeld extends Spielfeld
 {
