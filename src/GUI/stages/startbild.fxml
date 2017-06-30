@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/menu/bg-start-screen.png); -fx-background-size: 1024px 768px; -fx-background-repeat: no-repeat; -fx-background-position: center;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/background/bg-start-screen.png); -fx-background-size: 1024px 768px; -fx-background-repeat: no-repeat; -fx-background-position: center;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
    <children>
-      <Button fx:id="startButton" layoutX="312.0" layoutY="550.0" mnemonicParsing="false" onAction="#handleStartButtonAction" prefHeight="75.0" prefWidth="150.0" style="-fx-background-image: url(/graphics/buttons/start.png); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-size: 165px 85px;">
+      <Button fx:id="startButton" layoutX="138.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleStartButtonAction" prefHeight="75.0" prefWidth="150.0" style="-fx-background-image: url(/graphics/buttons/start.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 150px 75px; -fx-background-color: transparent" >
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <font>
+            <Font name="Arial Bold Italic" size="26.0" />
+         </font>
       </Button>
-      <Button layoutX="512.0" layoutY="550.0" mnemonicParsing="false" onAction="#handleQuitButtonAction" prefHeight="75.0" prefWidth="150.0" style="-fx-background-image: url(/graphics/buttons/quit.png); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-size: 165px 85px;" />
+      <Button layoutX="723.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleQuitButtonAction" prefHeight="75.0" prefWidth="150.0" style="-fx-background-image: url(/graphics/buttons/quit.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 150px 75px; -fx-background-color: transparent" >
+         <font>
+            <Font name="Arial Bold Italic" size="26.0" />
+         </font></Button>
    </children>
 </Pane>

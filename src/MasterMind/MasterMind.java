@@ -2,28 +2,12 @@
  * Created by Noctis on 24.05.2017.
  */
 package MasterMind;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+
 
 
 // Klasse die den Spielfluss bestimmt
 public class MasterMind implements Runnable
 {
-    private static final int SPIELERMASTER = 1;
-    private static final int VERSUCHSSPIELER = 0;
-    private static final int ZUGBEENDEN = 2;
-    private static final int SPIELBEENDEN = 1;
-
-    public Spielbrett getSpielbrett() {
-        return spielbrett;
-    }
-
-    public void setSpielbrett(Spielbrett spielbrett) {
-        this.spielbrett = spielbrett;
-    }
-
-    //private StartController controller;
     private Spielbrett spielbrett;
     
     private boolean siegBedingung = false;
@@ -31,14 +15,6 @@ public class MasterMind implements Runnable
     public boolean isSiegBedingung() {
 		return siegBedingung;
 	}
-
-	public void setSiegBedingung(boolean siegBedingung) {
-		this.siegBedingung = siegBedingung;
-	}
-
-	public boolean isZugBeenden() {
-        return zugBeenden;
-    }
 
     public void setZugBeenden(boolean zugBeenden) {
         this.zugBeenden = zugBeenden;
@@ -50,16 +26,8 @@ public class MasterMind implements Runnable
         return feldStatus;
     }
 
-    public void setFeldStatus(boolean feldStatus) {
-        this.feldStatus = feldStatus;
-    }
-
     private boolean feldStatus = true;
     private int versuche = 0;
-
-    public int getFarbe() {
-        return farbe;
-    }
 
     public void setFarbe(int farbe) {
         this.farbe = farbe;
@@ -73,10 +41,6 @@ public class MasterMind implements Runnable
 
     public void setFarbeGedrueckt(boolean farbeGedrueckt) {
         this.farbeGedrueckt = farbeGedrueckt;
-    }
-
-    public boolean isPositionGedrueckt() {
-        return positionGedrueckt;
     }
 
     public void setPositionGedrueckt(boolean positionGedrueckt) {
@@ -95,9 +59,7 @@ public class MasterMind implements Runnable
     }
 
     private int position = 0;
-    //private GUI gui = new GUI();
 
-    //private MasterMind.MasterMindRegeln regeln;
     public MasterMind()
     {
         try
@@ -109,41 +71,8 @@ public class MasterMind implements Runnable
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
-        //regeln = new MasterMind.MasterMindRegeln();
     }
-    //Abfrage ob die Runde oder das Spiel beendet werden soll, je nach Situation
-    private void spielBeenden(int fall, int spieler)
-    {
-        BufferedReader eingabe = new BufferedReader(new InputStreamReader(System.in));
-        try
-        {
-            switch(fall)
-            {
-                case SPIELBEENDEN:
-                    System.out.print("Moechten Sie das Spiel beenden?(y/n) ");
-                    if(eingabe.readLine().contains("y"))
-                        System.exit(0);
-                    siegBedingung = false;
-                    versuche = 0;
-                    break;
-                case ZUGBEENDEN:
-                    feldStatus = spielbrett.pruefeVersuchsOderMasterFeld(spieler);
-                    if(!feldStatus)
-                    {
-                        System.out.print("Moechten Sie Ihren Zug beenden?(y/n) ");
-                        if(eingabe.readLine().contains("y"))
-                            zugBeenden = true;
-                    }
-                    break;
-            }
-        }
-        catch(IOException ioe)
-        {
-            ioe.printStackTrace();
-        }
-    }
-
-    //Belege tippfeld, die Runde kann erst beendet werden wenn das Feld richtig gesetzt wurde
+   //Belege tippfeld, die Runde kann erst beendet werden wenn das Feld richtig gesetzt wurde
     private void setzeTippFeld()
     {
         try{
@@ -157,9 +86,10 @@ public class MasterMind implements Runnable
                 spielbrett.getTipp().setzeSpielfigur(position, new Spielfigur(farbe));
                 farbeGedrueckt = false;
                 positionGedrueckt = false;
+                for(int i = 0; i < 5; i++)
+                    System.out.println("Signal "+versuche+": Position"+i+": "+
+                        Integer.toHexString(spielbrett.getTipp().figuren[i].getFarbe()));
             }
-                /*System.out.println("Versuch Feld: Position: "+position+" Farbe: "+
-                        spielbrett.getVersuch().figuren[position].getFarbe());*/
                 feldStatus = spielbrett.pruefeTippFeld();
         }
     }catch(Exception e){
@@ -168,19 +98,18 @@ public class MasterMind implements Runnable
      }
     }
     //preuft ob das Versuchs Feld dem Master Feld entspricht, also ob die Sieg Bedingung erfuellt ist
-    private void pruefeSiegBedingung()
+    private boolean pruefeSiegBedingung()
     {
-        //System.out.println("Siegbedingung");
         for(int i = 0; i < spielbrett.getVersuch().figuren.length; i++)
         {
             if(spielbrett.getVersuch().figuren[i].getFarbe() != spielbrett.getMaster().figuren[i].getFarbe())
             {
-                //System.out.println("SiegBedingung nicht erfuellt");
                 siegBedingung = false;
-                return;
+                return false;
             }
         }
         siegBedingung = true;
+        return true;
     }
     //Setzen des Versuchsfeldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
     private void setzeVersuchsFeld()
@@ -198,11 +127,10 @@ public class MasterMind implements Runnable
                 positionGedrueckt = false;
                 for(int i = 0; i < 5; i++)
                 {
-                    System.out.println("Position"+i+": "+Integer.toHexString(spielbrett.getMaster().figuren[i].getFarbe()));
+                    System.out.println("Versuch "+versuche+": Position"+i+": "+
+                            Integer.toHexString(spielbrett.getVersuch().figuren[i].getFarbe()));
                 }
             }
-                /*System.out.println("Versuch Feld: Position: "+position+" Farbe: "+
-                        spielbrett.getVersuch().figuren[position].getFarbe());*/
             feldStatus = spielbrett.getVersuch().pruefeFeldAufGesetzt();
 
         }
@@ -229,7 +157,7 @@ public class MasterMind implements Runnable
                 positionGedrueckt = false;
                 for(int i = 0; i < 5; i++)
                 {
-                    System.out.println("Position"+i+": "+Integer.toHexString(spielbrett.getMaster().figuren[i].getFarbe()));
+                    System.out.println("MasterMind: Position"+i+": "+Integer.toHexString(spielbrett.getMaster().figuren[i].getFarbe()));
                 }
             }
             feldStatus = spielbrett.getMaster().pruefeFeldAufGesetzt();
@@ -247,41 +175,16 @@ public class MasterMind implements Runnable
     //Frage ob Spiel beendet werden soll oder weiter gespielt werden soll
     public void run()
     {
-        
         setzeMasterMind();
-        while(versuche < 11 || !siegBedingung)
+        while(versuche < 11 && !siegBedingung)
         {
         	setzeVersuchsFeld();
-            pruefeSiegBedingung();
-        	setzeTippFeld();
-        	versuche++;
+            if(!pruefeSiegBedingung())
+                setzeTippFeld();
+            versuche++;
         	spielbrett.setTipp(new TippFeld());
         	spielbrett.setVersuch(new VersuchsFeld());
         }
-        //setzeTippFeld();
-        //while(true)
-        //{
-            //gui.zeichneSpielbrett();
-            /*setzeMasterMind();
-            while (!siegBedingung && versuche < 11)
-            {
-                setzeVersuchsFeld();
-                setzeTippFeld();
-                pruefeSiegBedingung();
-                versuche++;
-                spielbrett.setTipp(new TippFeld());
-            }
-            spielbrett = new Spielbrett();
-            spielBeenden(SPIELBEENDEN, SPIELERMASTER);
-        }*/
     }
-    /*public static void main(String args[]) {
-        try {
-            MasterMind spielSitzung = new MasterMind();
-            spielSitzung.spielen();
-        }catch(Exception e){
-            e.printStackTrace();
-            System.out.println(e.getMessage());
-        }
-    }*/
+    
 }

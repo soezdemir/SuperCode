@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/menu/bg-continue-screen.png); -fx-background-size: 1024px 768px; -fx-background-repeat: no-repeat; -fx-background-position: center;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
+<Pane id="hauptpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/background/bg-master-continue-screen.png); -fx-background-size: 1024px 768px; -fx-background-repeat: no-repeat; -fx-background-position: center;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
    <children>
-      <Button layoutX="600.0" layoutY="533.0" mnemonicParsing="false" onAction="#handleWeiterVersuchAction" text="Continue" />
+      <Button id="zugBeenden" layoutX="375.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleWeiterVersuchAction" prefHeight="150.0" prefWidth="300.0" style="-fx-background-image: url(/graphics/buttons/continue.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 300px 150px; -fx-background-color: transparent">
+      </Button>
    </children>
 </Pane>

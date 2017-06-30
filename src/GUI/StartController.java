@@ -6,27 +6,23 @@ package GUI;
 import MasterMind.*;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
-
-import static javafx.application.ConditionalFeature.FXML;
-
 
 public class StartController
 {
     private static MasterMind masterMind;
     private static GUI gui = new GUI();
-    private static Stage mastermindSetzen = new Stage();
-    private static Stage versuchstage = new Stage();
-    //private static Stage zwischenMasterStage;
-    private static Stage zwischenVersuchStage = new Stage();
-    private static Stage signalstage = new Stage();
-    private static Stage siegStage = new Stage();
+    private static Stage currentStage = new Stage();
+    private static Stage startStage = new Stage();
+    private static Scene mastermindSetzen;
+    private static Scene versuchscene;
+    private static Scene zwischenVersuchScene;
+    private static Scene signalScene;
+    private static Scene siegScene;
     private static int zug;
-    //private static String zugS = Integer.toString(zug);
     private static String farbe;
     private static String[] posFarbe = new String[5];
     private static String[] posSignal = new String[5];
@@ -37,33 +33,51 @@ public class StartController
     @FXML private Button signal2;
     @FXML private Button signal3;
     @FXML private Button signal4;
+    @FXML private Button posMaster0;
+    @FXML private Button posMaster1;
+    @FXML private Button posMaster2;
+    @FXML private Button posMaster3;
+    @FXML private Button posMaster4;
 
+    public static String getBACKGROUND() {
+        return BACKGROUND;
+    }
     private static final String BACKGROUND = "-fx-background-";
+    private static final String HINTERGRUNDPFAD = "image: url(/graphics/background/";
     private static final String SPIELFIGURPFAD = BACKGROUND+"image: url(/graphics/spielfiguren/";
-    private static final String SPIELFIGURGROESSE = BACKGROUND+"size: 40px 40px;";
+    private static final String SPIELFIGURGROESSE = BACKGROUND+"size: 60px 60px;";
+    public static String getNOREPEAT() {
+        return NOREPEAT;
+    }
     private static final String NOREPEAT = BACKGROUND+"repeat: no-repeat;";
+    public static String getBACKGROUNDIMAGEPOSITION() {
+        return BACKGROUNDIMAGEPOSITION;
+    }
     private static final String BACKGROUNDIMAGEPOSITION = BACKGROUND+"position: center;";
     private static final String BILDDATEIENDUNG =".png);";
     private static final String MASTER = "#master";
     private static final String VERSUCH = "#versuch";
     private static final String SIGNAL = "#signal";
+    private static final String SIEGMASTERMIND = BACKGROUND+HINTERGRUNDPFAD+"bg-mastermind-win"+BILDDATEIENDUNG;
+    private static final String SIGNALBACKGROUND = BACKGROUND+HINTERGRUNDPFAD+"bg-signal-slot"+BILDDATEIENDUNG;
 
     @FXML protected void handleStartButtonAction(ActionEvent event)throws Exception
     {
         zug = 1;
     	masterMind = new MasterMind();
-        Stage stage = (Stage) startButton.getScene().getWindow();
-        mastermindSetzen = gui.ladeMastermindSetzen(mastermindSetzen);
-        versuchstage = gui.ladeVersuchStage(versuchstage);
-        zwischenVersuchStage = gui.ladeZwischenVersuchStage(zwischenVersuchStage);
-        signalstage = gui.ladeMastermindSignal(signalstage);
-        siegStage = gui.ladeSiegStage(siegStage);
-        siegStage.hide();
-        mastermindSetzen.show();
-        stage.close();
+        startStage = (Stage) startButton.getScene().getWindow();
+        mastermindSetzen = gui.ladeMastermindSetzen();
+        versuchscene = gui.ladeVersuchStage();
+        zwischenVersuchScene = gui.ladeZwischenVersuchStage();
+        signalScene = gui.ladeMastermindSignal();
+        siegScene = gui.ladeSiegStage();
+        currentStage.setScene(mastermindSetzen);
+        startStage.close();
+        currentStage.show();
+        currentStage.setFullScreen(true);
+        currentStage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         Thread engine = new Thread(masterMind);
         engine.start();
-        //masterMind.spielen(currentstage, this);
     }
 
     @FXML protected void handleQuitButtonAction(ActionEvent event)
@@ -158,10 +172,14 @@ public class StartController
         	{
         		zeichneNeuSignal(source, masterMind.getPosition());
         	}
+            else if(source == posMaster0)
+            {
+                zeichneNeuMaster(source, masterMind.getPosition());
+            }
         	else
         		zeichneNeu(source, masterMind.getPosition());
+            masterMind.setPositionGedrueckt(true);
         }
-        masterMind.setPositionGedrueckt(true);
     }
 
     @FXML protected void handlePos1Action(ActionEvent event)
@@ -174,10 +192,14 @@ public class StartController
         	{
         		zeichneNeuSignal(source, masterMind.getPosition());
         	}
+            else if(source == posMaster1)
+            {
+                zeichneNeuMaster(source, masterMind.getPosition());
+            }
         	else
         		zeichneNeu(source, masterMind.getPosition());
+            masterMind.setPositionGedrueckt(true);
         }
-        masterMind.setPositionGedrueckt(true);
     }
 
     @FXML protected void handlePos2Action(ActionEvent event)
@@ -190,10 +212,14 @@ public class StartController
         	{
         		zeichneNeuSignal(source, masterMind.getPosition());
         	}
+            else if(source == posMaster2)
+            {
+                zeichneNeuMaster(source, masterMind.getPosition());
+            }
         	else
         		zeichneNeu(source, masterMind.getPosition());
+            masterMind.setPositionGedrueckt(true);
         }
-        masterMind.setPositionGedrueckt(true);
     }
 
     @FXML protected void handlePos3Action(ActionEvent event)
@@ -206,10 +232,14 @@ public class StartController
         	{
         		zeichneNeuSignal(source, masterMind.getPosition());
         	}
+            else if(source == posMaster3)
+            {
+                zeichneNeuMaster(source, masterMind.getPosition());
+            }
         	else
         		zeichneNeu(source, masterMind.getPosition());
+            masterMind.setPositionGedrueckt(true);
         }
-        masterMind.setPositionGedrueckt(true);
     }
 
     @FXML protected void handlePos4Action(ActionEvent event)
@@ -222,10 +252,14 @@ public class StartController
         	{
         		zeichneNeuSignal(source, masterMind.getPosition());
         	}
+            else if(source == posMaster4)
+            {
+                zeichneNeuMaster(source, masterMind.getPosition());
+            }
         	else
         		zeichneNeu(source, masterMind.getPosition());
+            masterMind.setPositionGedrueckt(true);
         }
-        masterMind.setPositionGedrueckt(true);
     }
 
     @FXML protected void handleZugBeendenInitialAction(ActionEvent event)throws Exception
@@ -233,12 +267,11 @@ public class StartController
     	if(masterMind.isFeldStatus())
     	{
     		masterMind.setZugBeenden(true);
-    		//signalstage = gui.ladeMastermindSignal(signalstage);
         	for(int i = 0; i < 5; i++)
-        		signalstage.getScene().lookup(MASTER+i).setStyle(SPIELFIGURPFAD+posFarbe[i]+BILDDATEIENDUNG
+        		signalScene.lookup(MASTER+i).setStyle(SPIELFIGURPFAD+posFarbe[i]+BILDDATEIENDUNG
         				+SPIELFIGURGROESSE+NOREPEAT+BACKGROUNDIMAGEPOSITION);
-        	versuchstage.show();
-        	mastermindSetzen.close();
+        	currentStage.setScene(versuchscene);
+        	currentStage.setFullScreen(true);
     	}
     }
     
@@ -248,17 +281,17 @@ public class StartController
         {
             int i = 0;
         	masterMind.setZugBeenden(true);
-            versuchstage.getScene().lookup(VERSUCH+Integer.toString(zug)).setVisible(true);
-            versuchstage.getScene().lookup(VERSUCH+Integer.toString(zug-1)).setDisable(true);
+            versuchscene.lookup(VERSUCH+Integer.toString(zug)).setDisable(false);
+            versuchscene.lookup(VERSUCH+Integer.toString(zug-1)).setDisable(true);
             while(i < 5 && posSignal[i] != "")
             {
-            	versuchstage.getScene().lookup(SIGNAL+i+Integer.toString(zug-1)).setStyle(SPIELFIGURPFAD+posSignal[i]+BILDDATEIENDUNG
+            	versuchscene.lookup(SIGNAL+i+Integer.toString(zug-1)).setStyle(SPIELFIGURPFAD+posSignal[i]+BILDDATEIENDUNG
             			+SPIELFIGURGROESSE+NOREPEAT+BACKGROUNDIMAGEPOSITION);
             	posSignal[i] = "";
             	i++;
             }
-            versuchstage.show();
-            signalstage.hide();
+            currentStage.setScene(versuchscene);
+            currentStage.setFullScreen(true);
         }
      }
 
@@ -270,19 +303,18 @@ public class StartController
             Thread.sleep(2);
             if(masterMind.isSiegBedingung())
             {
-            	siegStage.show();
+            	currentStage.setScene(siegScene);
             }
-            //TODO verlierstage einrichten
             else if(zug == 12)
             {
-            	siegStage.getScene().lookup("#hauptpane").setStyle("eigenschaften des backgrounds(verlierbackground)");
-            	siegStage.show();
+            	siegScene.lookup("#hauptpane").setStyle(SIEGMASTERMIND+NOREPEAT+BACKGROUNDIMAGEPOSITION+
+                    BACKGROUND+"size: "+Double.toString(GUI.BACKGROUNDBREITE)+"px "+Double.toString(GUI.BACKGROUNDHOEHE)+"px");
+            	currentStage.setScene(siegScene);
             }
             else
-            	zwischenVersuchStage.show();
-            versuchstage.hide();
+            	currentStage.setScene(zwischenVersuchScene);
             zug++;
-            //zugS = Integer.toString(zug);
+            currentStage.setFullScreen(true);
         }
     }
 
@@ -290,12 +322,12 @@ public class StartController
     {
     	for(int i = 0; i < 5; i++)
     	{
-    		signalstage.getScene().lookup(VERSUCH+i).setStyle(SPIELFIGURPFAD+posFarbe[i]+BILDDATEIENDUNG+SPIELFIGURGROESSE+
+    		signalScene.lookup(VERSUCH+i).setStyle(SPIELFIGURPFAD+posFarbe[i]+BILDDATEIENDUNG+SPIELFIGURGROESSE+
     				NOREPEAT+BACKGROUNDIMAGEPOSITION);
-    		signalstage.getScene().lookup(SIGNAL+i).setStyle(BACKGROUND+"image: url();");
+    		signalScene.lookup(SIGNAL+i).setStyle(SIGNALBACKGROUND+SPIELFIGURGROESSE+NOREPEAT+BACKGROUNDIMAGEPOSITION);
     	}
-    	signalstage.show();
-    	zwischenVersuchStage.hide();
+    	currentStage.setScene(signalScene);
+        currentStage.setFullScreen(true);
     }
 
     private void zeichneNeu(Button source, int position)
@@ -303,7 +335,13 @@ public class StartController
         posFarbe[position] = farbe;
         source.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG+SPIELFIGURGROESSE+NOREPEAT+BACKGROUNDIMAGEPOSITION);
     }
-    
+
+    private void zeichneNeuMaster(Button source, int position)
+    {
+        posFarbe[position] = farbe;
+        source.setStyle(SPIELFIGURPFAD+farbe+"_mm"+BILDDATEIENDUNG+SPIELFIGURGROESSE+NOREPEAT+BACKGROUNDIMAGEPOSITION);
+    }
+
     private void zeichneNeuSignal(Button source, int position)
     {
     	posSignal[position] = farbe;

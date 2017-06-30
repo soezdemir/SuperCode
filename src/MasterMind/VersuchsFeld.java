@@ -7,6 +7,5 @@ public class VersuchsFeld extends Spielfeld
     VersuchsFeld()
     {
         super();
-
     }
 }

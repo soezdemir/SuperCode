@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url(/graphics/spielfiguren/bg-player-win.png); -fx-background-size: 1024px 768px; -fx-background-repeat: no-repeat; -fx-background-position: center;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
+<Pane id="hauptpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StartController">
    <children>
-      <Button fx:id="startButton" layoutX="83.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleStartButtonAction" text="Start" />
-      <Button layoutX="440.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleQuitButtonAction" text="Quit" />
+      <Button id="start" fx:id="startButton" layoutX="214.0" layoutY="548.0" mnemonicParsing="false" onAction="#handleStartButtonAction" prefHeight="150.0" prefWidth="300.0" style="-fx-background-image: url(/graphics/buttons/again.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 150px 75px; -fx-background-color: transparent" >
+      </Button>
+      <Button id="quit" layoutX="744.0" layoutY="548.0" mnemonicParsing="false" onAction="#handleQuitButtonAction" prefHeight="150.0" prefWidth="300.0" style="-fx-background-image: url(/graphics/buttons/quit.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 150px 75px; -fx-background-color: transparent" >
+      </Button>
    </children>
 </Pane>
