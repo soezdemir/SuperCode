@@ -4,68 +4,61 @@
 
 package GUI;
 
-import com.sun.javafx.cursor.CursorType;
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.scene.Cursor;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Toolkit;
 
-public class GUI extends Application
-{
+public class GUI extends Application {
     public static final double BACKGROUNDBREITE = Toolkit.getDefaultToolkit().getScreenSize().width;
     public static final double BACKGROUNDHOEHE = Toolkit.getDefaultToolkit().getScreenSize().height;
     private static final double DISPLAYBREITE = 1024;
     private static final double VERSUCHHOEHE = 790;
     private static final double DISPLAYHOEHE = 768;
-    private static final double QUOTIENTBREITE = BACKGROUNDBREITE/DISPLAYBREITE;
-    private static final double QUOTIENTHOEHE = BACKGROUNDHOEHE/DISPLAYHOEHE;
-    private static final String BACKGROUNDDIMENSION = StartController.getBACKGROUND()+"size: "+Double.toString(BACKGROUNDBREITE)+"px "+
-            Double.toString(BACKGROUNDHOEHE)+"px;";
+    private static final double QUOTIENTBREITE = BACKGROUNDBREITE / DISPLAYBREITE;
+    private static final double QUOTIENTHOEHE = BACKGROUNDHOEHE / DISPLAYHOEHE;
+    private static final String BACKGROUNDDIMENSION = StartController.getBACKGROUND() + "size: " + Double.toString(BACKGROUNDBREITE) + "px " +
+            Double.toString(BACKGROUNDHOEHE) + "px;";
     private static final String HINTERGRUNDPFAD = "image: url(/graphics/background/";
-    private static final String HINTERGRUND = StartController.getBACKGROUND()+HINTERGRUNDPFAD+"background.png);";
-    private static final String HINTERGRUNDMASTER = StartController.getBACKGROUND()+HINTERGRUNDPFAD+"bg-mastermind-set-screen.png);";
-    private static final String HINTERGRUNDCONTINUE = StartController.getBACKGROUND()+HINTERGRUNDPFAD+"bg-master-continue-screen.png);";
-    private static final String SIEGSPIELER = StartController.getBACKGROUND()+HINTERGRUNDPFAD+"bg-player-win.png);";
+    private static final String HINTERGRUND = StartController.getBACKGROUND() + HINTERGRUNDPFAD + "background.png);";
+    private static final String HINTERGRUNDMASTER = StartController.getBACKGROUND() + HINTERGRUNDPFAD + "bg-mastermind-set-screen.png);";
+    private static final String HINTERGRUNDCONTINUE = StartController.getBACKGROUND() + HINTERGRUNDPFAD + "bg-master-continue-screen.png);";
+    private static final String SIEGSPIELER = StartController.getBACKGROUND() + HINTERGRUNDPFAD + "bg-player-win.png);";
     private static final String HAUPTPANE = "#hauptpane";
-    private static final String START ="#start";
-    private static final String QUIT ="#quit";
-    private static final String ZUGBEENDEN ="#zugBeenden";
-    private static final String MASTERTEXT ="#masterTextField";
-    private static final String LOESCHEN ="#loeschen";
-    private static final String SETZFELD ="#setzFeld";
-    private static final String FARBFELD ="#farbFeld";
-    private static final String MASTERFELD ="#masterFeld";
+    private static final String START = "#start";
+    private static final String QUIT = "#quit";
+    private static final String ZUGBEENDEN = "#zugBeenden";
+    private static final String MASTERTEXT = "#masterTextField";
+    private static final String LOESCHEN = "#loeschen";
+    private static final String SETZFELD = "#setzFeld";
+    private static final String FARBFELD = "#farbFeld";
+    private static final String MASTERFELD = "#masterFeld";
     private static final String MASTERPADLOCKS = "#masterPadlocks";
-    private static final String VERSUCHFELD ="#versuchFeld";
-    private static final String PLAYPANE ="#playPane";
-    private static final String SIGNALPANE="#signalPane";
-
-    //private JFrame frmPos;
+    private static final String VERSUCHFELD = "#versuchFeld";
+    private static final String PLAYPANE = "#playPane";
+    private static final String SIGNALPANE = "#signalPane";
 
 
-    public GUI(){}
+
+    public GUI() { }
+
     public static void main(String[] args)
     {
         launch(args);
     }
+
     @Override
     public void start(Stage stage)throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("stages/startbild.fxml"));
         Scene scene = new Scene(root);
-
         stage.setScene(scene);
         scene.setCursor(Cursor.OPEN_HAND);
         scene.getCursor();
         stage.setResizable(false);
         stage.show();
     }
-
-
 
     public Scene ladeMastermindSetzen()throws Exception
     {
@@ -130,7 +123,6 @@ public class GUI extends Application
         scene.lookup(FARBFELD).setLayoutY((371/DISPLAYHOEHE)*BACKGROUNDHOEHE);
     }
 
-
     private void versuchsceneAufloesung(Scene scene)
     {
         scene.lookup(HAUPTPANE).setStyle(HINTERGRUND+StartController.getNOREPEAT()+StartController.getBACKGROUNDIMAGEPOSITION()
@@ -194,4 +186,5 @@ public class GUI extends Application
     {
         System.exit(0);
     }
+
 }

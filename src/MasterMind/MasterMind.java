@@ -2,10 +2,7 @@
  * Created by cpatzek & soezdemir 17/05/2017.
  */
 
-
 package MasterMind;
-
-
 
 // Klasse die den Spielfluss bestimmt
 public class MasterMind implements Runnable
