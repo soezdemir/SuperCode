@@ -5,12 +5,19 @@
 package GUI;
 
 import MasterMind.*;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
+import javafx.scene.Cursor;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCombination;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
+
+import javax.swing.*;
 
 public class StartController
 {
@@ -62,6 +69,9 @@ public class StartController
     private static final String SIEGMASTERMIND = BACKGROUND+HINTERGRUNDPFAD+"bg-mastermind-win"+BILDDATEIENDUNG;
     private static final String SIGNALBACKGROUND = BACKGROUND+HINTERGRUNDPFAD+"bg-signal-slot"+BILDDATEIENDUNG;
 
+
+
+
     @FXML protected void handleStartButtonAction(ActionEvent event)throws Exception
     {
         zug = 1;
@@ -85,6 +95,9 @@ public class StartController
     {
         System.exit(0);
     }
+
+
+
 
     @FXML protected void handleSchwarzAction(ActionEvent event)
     {

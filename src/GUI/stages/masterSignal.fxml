@@ -24,12 +24,15 @@
             <Button fx:id="signal4" mnemonicParsing="false" onAction="#handlePos4Action" prefHeight="60.0" prefWidth="60.0" style="-fx-background-image: url(/graphics/background/bg-signal-slot.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 60px 60px;" />
          </children>
       </HBox>
-      <Text id="masterTextField" layoutX="245.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MasterMind">
+      <Text id="masterTextField" layoutX="371.0" layoutY="121.0" opacity="0.2" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
          <font>
-            <Font name="Arial Bold Italic" size="26.0" />
+            <Font name="Arial Bold" size="42.0" />
          </font>
       </Text>
-      <HBox id="masterFeld" layoutX="385.0" layoutY="87.0" prefHeight="60.0" prefWidth="300.0" >
+      <HBox id="masterPadlocks" layoutX="385.0" layoutY="30.0" prefHeight="25.0" prefWidth="300.0">
+         <Label prefHeight="25.0" prefWidth="300.0" style="-fx-background-image: url(/graphics/background/bg-masterFeld-padlocks.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 300px 25px;" />
+      </HBox>
+      <HBox id="masterFeld" layoutX="385.0" layoutY="60.0" prefHeight="60.0" prefWidth="300.0" style="-fx-border-style: solid; -fx-border-color: E0F101; -fx-border-width:2;">
          <children>
             <Label id="master0" prefHeight="60.0" prefWidth="60.0" />
             <Label id="master1" prefHeight="60.0" prefWidth="60.0" />
@@ -38,7 +41,7 @@
             <Label id="master4" prefHeight="60.0" prefWidth="60.0" />
          </children>
       </HBox>
-      <HBox id="versuchFeld" layoutX="385.0" layoutY="147.0" prefHeight="60.0" prefWidth="300.0">
+      <HBox id="versuchFeld" layoutX="385.0" layoutY="180.0" prefHeight="60.0" prefWidth="300.0">
          <children>
             <Label id="versuch0" prefHeight="60.0" prefWidth="60.0" />
             <Label id="versuch1" prefHeight="60.0" prefWidth="60.0" />

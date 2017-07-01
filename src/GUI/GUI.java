@@ -4,9 +4,13 @@
 
 package GUI;
 
+import com.sun.javafx.cursor.CursorType;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
+import javafx.scene.Cursor;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -36,9 +40,13 @@ public class GUI extends Application
     private static final String SETZFELD ="#setzFeld";
     private static final String FARBFELD ="#farbFeld";
     private static final String MASTERFELD ="#masterFeld";
+    private static final String MASTERPADLOCKS = "#masterPadlocks";
     private static final String VERSUCHFELD ="#versuchFeld";
     private static final String PLAYPANE ="#playPane";
     private static final String SIGNALPANE="#signalPane";
+
+
+
 
     public GUI(){}
     public static void main(String[] args)
@@ -50,15 +58,21 @@ public class GUI extends Application
         Parent root = FXMLLoader.load(getClass().getResource("stages/startbild.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        scene.setCursor(Cursor.OPEN_HAND);
+        scene.getCursor();
         stage.setResizable(false);
         stage.show();
     }
+
+
 
     public Scene ladeMastermindSetzen()throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("stages/mastermindSetzen.fxml"));
         Scene scene = new Scene(root);
         mastermindSetzenAufloesung(scene);
+        scene.setCursor(Cursor.OPEN_HAND);
+        scene.getCursor();
         return scene;
     }
 
@@ -67,6 +81,8 @@ public class GUI extends Application
         Parent root = FXMLLoader.load(getClass().getResource("stages/zwischenVersuch.fxml"));
         Scene scene = new Scene(root);
         zwischenVersuchAufloesung(scene);
+        scene.setCursor(Cursor.OPEN_HAND);
+        scene.getCursor();
         return scene;
     }
 
@@ -75,6 +91,9 @@ public class GUI extends Application
         Parent root = FXMLLoader.load(getClass().getResource("stages/masterSignal.fxml"));
         Scene scene = new Scene(root);
         signalSceneAufloesung(scene);
+        scene.setCursor(Cursor.OPEN_HAND);
+        scene.getCursor();
+
         return scene;
     }
 
@@ -83,6 +102,8 @@ public class GUI extends Application
         Parent root = FXMLLoader.load(getClass().getResource("stages/versuch.fxml"));
         Scene scene = new Scene(root);
         versuchsceneAufloesung(scene);
+        scene.setCursor(Cursor.OPEN_HAND);
+        scene.getCursor();
         return scene;
     }
     
@@ -129,8 +150,10 @@ public class GUI extends Application
                 +BACKGROUNDDIMENSION);
         scene.lookup(SETZFELD).setLayoutX((385/DISPLAYBREITE)*BACKGROUNDBREITE);
         scene.lookup(SETZFELD).setLayoutY((337/DISPLAYHOEHE)*BACKGROUNDHOEHE);
-        scene.lookup(FARBFELD).setLayoutX((475/DISPLAYBREITE)*BACKGROUNDBREITE);
-        scene.lookup(FARBFELD).setLayoutY((432/DISPLAYHOEHE)*BACKGROUNDHOEHE);
+        scene.lookup(FARBFELD).setLayoutX((425/DISPLAYBREITE)*BACKGROUNDBREITE);
+        scene.lookup(FARBFELD).setLayoutY((415/DISPLAYHOEHE)*BACKGROUNDHOEHE);
+        scene.lookup(MASTERPADLOCKS).setLayoutX((385/DISPLAYBREITE)*BACKGROUNDBREITE);
+        scene.lookup(MASTERPADLOCKS).setLayoutY((67/DISPLAYHOEHE)*BACKGROUNDHOEHE);
         scene.lookup(MASTERFELD).setLayoutX((385/DISPLAYBREITE)*BACKGROUNDBREITE);
         scene.lookup(MASTERFELD).setLayoutY((87/DISPLAYHOEHE)*BACKGROUNDHOEHE);
         scene.lookup(VERSUCHFELD).setLayoutX((385/DISPLAYBREITE)*BACKGROUNDBREITE);
@@ -155,6 +178,10 @@ public class GUI extends Application
     {
         scene.lookup(HAUPTPANE).setStyle(SIEGSPIELER+StartController.getNOREPEAT()+StartController.getBACKGROUNDIMAGEPOSITION()
                 +BACKGROUNDDIMENSION);
+
+        scene.lookup(MASTERFELD).setLayoutX((450/DISPLAYBREITE)*BACKGROUNDBREITE);
+        scene.lookup(MASTERFELD).setLayoutY((485/DISPLAYHOEHE)*BACKGROUNDHOEHE);
+
         scene.lookup(START).setLayoutX((214/DISPLAYBREITE)*BACKGROUNDBREITE);
         scene.lookup(START).setLayoutY((348/DISPLAYHOEHE)*BACKGROUNDHOEHE);
         scene.lookup(QUIT).setLayoutX((684/DISPLAYBREITE)*BACKGROUNDBREITE);
