@@ -1,0 +1,50 @@
+MasterMind: Position0: df1818
+MasterMind: Position1: 5a5a5a
+MasterMind: Position2: 5a5a5a
+MasterMind: Position3: 5a5a5a
+MasterMind: Position4: 5a5a5a
+MasterMind: Position0: df1818
+MasterMind: Position1: de5a82
+MasterMind: Position2: 5a5a5a
+MasterMind: Position3: 5a5a5a
+MasterMind: Position4: 5a5a5a
+MasterMind: Position0: df1818
+MasterMind: Position1: de5a82
+MasterMind: Position2: de5a18
+MasterMind: Position3: 5a5a5a
+MasterMind: Position4: 5a5a5a
+MasterMind: Position0: df1818
+MasterMind: Position1: de5a82
+MasterMind: Position2: de5a18
+MasterMind: Position3: de18df
+MasterMind: Position4: 5a5a5a
+MasterMind: Position0: df1818
+MasterMind: Position1: de5a82
+MasterMind: Position2: de5a18
+MasterMind: Position3: de18df
+MasterMind: Position4: 9cdf18
+Versuch 0: Position0: df1818
+Versuch 0: Position1: 5a5a5a
+Versuch 0: Position2: 5a5a5a
+Versuch 0: Position3: 5a5a5a
+Versuch 0: Position4: 5a5a5a
+Versuch 0: Position0: df1818
+Versuch 0: Position1: de5a82
+Versuch 0: Position2: 5a5a5a
+Versuch 0: Position3: 5a5a5a
+Versuch 0: Position4: 5a5a5a
+Versuch 0: Position0: df1818
+Versuch 0: Position1: de5a82
+Versuch 0: Position2: de5a18
+Versuch 0: Position3: 5a5a5a
+Versuch 0: Position4: 5a5a5a
+Versuch 0: Position0: df1818
+Versuch 0: Position1: de5a82
+Versuch 0: Position2: de5a18
+Versuch 0: Position3: de18df
+Versuch 0: Position4: 5a5a5a
+Versuch 0: Position0: df1818
+Versuch 0: Position1: de5a82
+Versuch 0: Position2: de5a18
+Versuch 0: Position3: de18df
+Versuch 0: Position4: 9cdf18
