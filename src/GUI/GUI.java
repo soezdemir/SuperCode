@@ -12,7 +12,7 @@ import javafx.scene.*;
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
+import javax.swing.*;
 import java.awt.*;
 
 public class GUI extends Application
@@ -45,7 +45,7 @@ public class GUI extends Application
     private static final String PLAYPANE ="#playPane";
     private static final String SIGNALPANE="#signalPane";
 
-
+    //private JFrame frmPos;
 
 
     public GUI(){}
@@ -57,6 +57,7 @@ public class GUI extends Application
     public void start(Stage stage)throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("stages/startbild.fxml"));
         Scene scene = new Scene(root);
+
         stage.setScene(scene);
         scene.setCursor(Cursor.OPEN_HAND);
         scene.getCursor();
@@ -112,6 +113,8 @@ public class GUI extends Application
     	Parent root = FXMLLoader.load(getClass().getResource("stages/sieg.fxml"));
         Scene scene = new Scene(root);
         siegAufloesung(scene);
+        scene.setCursor(Cursor.HAND);
+        scene.getCursor();
         return scene;
     }
 
@@ -180,7 +183,7 @@ public class GUI extends Application
                 +BACKGROUNDDIMENSION);
 
         scene.lookup(MASTERFELD).setLayoutX((450/DISPLAYBREITE)*BACKGROUNDBREITE);
-        scene.lookup(MASTERFELD).setLayoutY((485/DISPLAYHOEHE)*BACKGROUNDHOEHE);
+        scene.lookup(MASTERFELD).setLayoutY((425/DISPLAYHOEHE)*BACKGROUNDHOEHE);
 
         scene.lookup(START).setLayoutX((214/DISPLAYBREITE)*BACKGROUNDBREITE);
         scene.lookup(START).setLayoutY((348/DISPLAYHOEHE)*BACKGROUNDHOEHE);

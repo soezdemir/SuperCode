@@ -282,7 +282,7 @@ public class StartController
     	{
     		masterMind.setZugBeenden(true);
         	for(int i = 0; i < 5; i++)
-        		signalScene.lookup(MASTER+i).setStyle(SPIELFIGURPFAD+posFarbe[i]+BILDDATEIENDUNG
+        		signalScene.lookup(MASTER+i).setStyle(SPIELFIGURPFAD+posFarbe[i]+"_mm"+BILDDATEIENDUNG
         				+SPIELFIGURGROESSE+NOREPEAT+BACKGROUNDIMAGEPOSITION);
         	currentStage.setScene(versuchscene);
         	currentStage.setFullScreen(true);
@@ -297,6 +297,7 @@ public class StartController
         	masterMind.setZugBeenden(true);
             versuchscene.lookup(VERSUCH+Integer.toString(zug)).setDisable(false);
             versuchscene.lookup(VERSUCH+Integer.toString(zug-1)).setDisable(true);
+
             while(i < 5 && posSignal[i] != "")
             {
             	versuchscene.lookup(SIGNAL+i+Integer.toString(zug-1)).setStyle(SPIELFIGURPFAD+posSignal[i]+BILDDATEIENDUNG
@@ -317,13 +318,25 @@ public class StartController
             Thread.sleep(2);
             if(masterMind.isSiegBedingung())
             {
-            	currentStage.setScene(siegScene);
+            	for(int i = 0; i < 5; i++)
+                {
+                    siegScene.lookup(MASTER + i).setStyle(SPIELFIGURPFAD + posFarbe[i] + "_mm" + BILDDATEIENDUNG
+                            + SPIELFIGURGROESSE + NOREPEAT + BACKGROUNDIMAGEPOSITION);
+                }
+
+                currentStage.setScene(siegScene);
             }
             else if(zug == 12)
             {
-            	siegScene.lookup("#hauptpane").setStyle(SIEGMASTERMIND+NOREPEAT+BACKGROUNDIMAGEPOSITION+
+                for(int j = 0; j < 5; j++)
+                {
+                    siegScene.lookup(MASTER + j).setStyle(SPIELFIGURPFAD + posFarbe[j] + "_mm" + BILDDATEIENDUNG
+                            + SPIELFIGURGROESSE + NOREPEAT + BACKGROUNDIMAGEPOSITION);
+                }
+            	    siegScene.lookup("#hauptpane").setStyle(SIEGMASTERMIND+NOREPEAT+BACKGROUNDIMAGEPOSITION+
                     BACKGROUND+"size: "+Double.toString(GUI.BACKGROUNDBREITE)+"px "+Double.toString(GUI.BACKGROUNDHOEHE)+"px");
-            	currentStage.setScene(siegScene);
+
+                currentStage.setScene(siegScene);
             }
             else
             	currentStage.setScene(zwischenVersuchScene);

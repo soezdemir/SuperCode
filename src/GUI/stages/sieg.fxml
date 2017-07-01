@@ -10,11 +10,11 @@
    <children>
       <HBox id="masterFeld" layoutX="385.0" layoutY="60.0" prefHeight="60.0" prefWidth="300.0" style="-fx-border-style: solid; -fx-border-color: E0F101; -fx-border-width:2;">
       <children>
-         <Label id="master0" prefHeight="60.0" prefWidth="60.0" />
-         <Label id="master1" prefHeight="60.0" prefWidth="60.0" />
-         <Label id="master2" prefHeight="60.0" prefWidth="60.0" />
-         <Label id="master3" prefHeight="60.0" prefWidth="60.0" />
-         <Label id="master4" prefHeight="60.0" prefWidth="60.0" />
+         <Label fx:id="master0" prefHeight="60.0" prefWidth="60.0" />
+         <Label fx:id="master1" prefHeight="60.0" prefWidth="60.0" />
+         <Label fx:id="master2" prefHeight="60.0" prefWidth="60.0" />
+         <Label fx:id="master3" prefHeight="60.0" prefWidth="60.0" />
+         <Label fx:id="master4" prefHeight="60.0" prefWidth="60.0" />
       </children>
       </HBox>
       <Button id="start" fx:id="startButton" layoutX="214.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleStartButtonAction" prefHeight="150.0" prefWidth="300.0" style="-fx-background-image: url(/graphics/buttons/again.png); -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-size: 300px 150px; -fx-background-color: transparent" >
