@@ -5,7 +5,9 @@
 
 package MasterMind;
 
-//Feld das alle Spielfiguren und Ihre Farben haelt zur Auswahl in der GUI
+/**
+* Feld das alle Spielfiguren und Ihre Farben haelt zur Auswahl in der GUI
+*/
 public class FigurenFeld extends Spielfeld
 {
     public static final int GROESSE = 10;
