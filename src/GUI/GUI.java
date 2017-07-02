@@ -1,5 +1,6 @@
 /**
  * Created by cpatzek & soezdemir 17/05/2017.
+ *@author Christian Patzek und Sadri Oezdemir
  */
 
 package GUI;
@@ -10,7 +11,9 @@ import javafx.scene.*;
 import javafx.scene.Cursor;
 import javafx.stage.Stage;
 import java.awt.Toolkit;
-
+/**
+*Laedt die einzelnen Scenen und fuehrt die Skalierung auf die native Aufloesung des Systems aus
+*/
 public class GUI extends Application {
     public static final double BACKGROUNDBREITE = Toolkit.getDefaultToolkit().getScreenSize().width;
     public static final double BACKGROUNDHOEHE = Toolkit.getDefaultToolkit().getScreenSize().height;
@@ -49,6 +52,9 @@ public class GUI extends Application {
         launch(args);
     }
 
+    /**
+    *laedt den Startbildschirm siehe startbild.fxml
+    */
     @Override
     public void start(Stage stage)throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("stages/startbild.fxml"));
@@ -59,7 +65,9 @@ public class GUI extends Application {
         stage.setResizable(false);
         stage.show();
     }
-
+    /**
+    *laedt die scene mastermindSetzen.fxml
+    */
     public Scene ladeMastermindSetzen()throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("stages/mastermindSetzen.fxml"));
@@ -69,7 +77,9 @@ public class GUI extends Application {
         scene.getCursor();
         return scene;
     }
-
+    /**
+    *laedt die scene zwischenVersuch.fxml
+    */
     public Scene ladeZwischenVersuchStage()throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("stages/zwischenVersuch.fxml"));
@@ -79,7 +89,9 @@ public class GUI extends Application {
         scene.getCursor();
         return scene;
     }
-
+    /**
+    *laedt die scene masterSignal.fxml
+    */
     public Scene ladeMastermindSignal()throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("stages/masterSignal.fxml"));
@@ -90,7 +102,9 @@ public class GUI extends Application {
 
         return scene;
     }
-
+    /**
+    *laedt die scene versuch.fxml
+    */
     public Scene ladeVersuchStage()throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("stages/versuch.fxml"));
@@ -100,7 +114,9 @@ public class GUI extends Application {
         scene.getCursor();
         return scene;
     }
-    
+    /**
+    *laedt die scene sieg.fxml
+    */
     public Scene ladeSiegStage()throws Exception
     {
     	Parent root = FXMLLoader.load(getClass().getResource("stages/sieg.fxml"));
@@ -110,7 +126,10 @@ public class GUI extends Application {
         scene.getCursor();
         return scene;
     }
-
+    /**
+    *skaliert die scene mastermindSetzen.fxml im Bezug auf die native Aufloesung des Displays
+    *@param Scene in der mastermindSetzen.fxml geladen wurde
+    */
     private void mastermindSetzenAufloesung(Scene scene)
     {
         scene.lookup(HAUPTPANE).setStyle(HINTERGRUNDMASTER+StartController.getNOREPEAT()+StartController.getBACKGROUNDIMAGEPOSITION()
@@ -122,7 +141,10 @@ public class GUI extends Application {
         scene.lookup(FARBFELD).setLayoutX((388/DISPLAYBREITE)*BACKGROUNDBREITE);
         scene.lookup(FARBFELD).setLayoutY((371/DISPLAYHOEHE)*BACKGROUNDHOEHE);
     }
-
+    /**
+    *skaliert die scene versuch.fxml im Bezug auf die native Aufloesung des Displays
+    *@param Scene in der versuch.fxml geladen wurde
+    */
     private void versuchsceneAufloesung(Scene scene)
     {
         scene.lookup(HAUPTPANE).setStyle(HINTERGRUND+StartController.getNOREPEAT()+StartController.getBACKGROUNDIMAGEPOSITION()
@@ -138,7 +160,10 @@ public class GUI extends Application {
         scene.lookup(ZUGBEENDEN).setLayoutX((793/DISPLAYBREITE)*BACKGROUNDBREITE);
         scene.lookup(ZUGBEENDEN).setLayoutY((32/VERSUCHHOEHE)*BACKGROUNDHOEHE);
     }
-
+    /**
+    *skaliert die scene masterSignal.fxml im Bezug auf die native Aufloesung des Displays
+    *@param Scene in der masterSignal.fxml geladen wurde
+    */
     private void signalSceneAufloesung(Scene scene)
     {
         scene.lookup(HAUPTPANE).setStyle(HINTERGRUND+StartController.getNOREPEAT()+StartController.getBACKGROUNDIMAGEPOSITION()
@@ -160,7 +185,10 @@ public class GUI extends Application {
         scene.lookup(ZUGBEENDEN).setLayoutX((793/DISPLAYBREITE)*BACKGROUNDBREITE);
         scene.lookup(ZUGBEENDEN).setLayoutY((32/DISPLAYHOEHE)*BACKGROUNDHOEHE);
     }
-
+    /**
+    *skaliert die scene zwischenVersuch.fxml im Bezug auf die native Aufloesung des Displays
+    *@param Scene in der zwischenVersuch.fxml geladen wurde
+    */
     private void zwischenVersuchAufloesung(Scene scene)
     {
         scene.lookup(HAUPTPANE).setStyle(HINTERGRUNDCONTINUE+StartController.getNOREPEAT()+StartController.getBACKGROUNDIMAGEPOSITION()
@@ -168,7 +196,10 @@ public class GUI extends Application {
         scene.lookup(ZUGBEENDEN).setLayoutX((412/DISPLAYBREITE)*BACKGROUNDBREITE);
         scene.lookup(ZUGBEENDEN).setLayoutY((334/DISPLAYHOEHE)*BACKGROUNDHOEHE);
     }
-
+    /**
+    *skaliert die scene sieg.fxml im Bezug auf die native Aufloesung des Displays
+    *@param Scene in der sieg.fxml geladen wurde
+    */
     private void siegAufloesung(Scene scene)
     {
         scene.lookup(HAUPTPANE).setStyle(SIEGSPIELER+StartController.getNOREPEAT()+StartController.getBACKGROUNDIMAGEPOSITION()
@@ -182,6 +213,9 @@ public class GUI extends Application {
         scene.lookup(QUIT).setLayoutX((684/DISPLAYBREITE)*BACKGROUNDBREITE);
         scene.lookup(QUIT).setLayoutY((348/DISPLAYHOEHE)*BACKGROUNDHOEHE);
     }
+    /**
+    *notwendig damit sich die Spielengine MasterMind.java ordnungsgemaess beendet
+    */
     @Override public void stop()
     {
         System.exit(0);
