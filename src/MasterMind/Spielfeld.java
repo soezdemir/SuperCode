@@ -39,6 +39,7 @@ public class Spielfeld
     /**
     *pruefe ob zwei Felder gleich sind
     *@return true wenn die Felder gleich sind
+     * @param vergleichsFeld Feld das verglichen werden soll
     */
     protected boolean pruefeGleichheit(Spielfeld vergleichsFeld)
     {

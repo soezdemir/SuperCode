@@ -67,6 +67,8 @@ public class GUI extends Application {
     }
     /**
     *laedt die scene mastermindSetzen.fxml
+     * @return Die scene mastermindSetzen
+     * @throws Exception moegliche Exceptions beim parsen der .fxml Datei
     */
     public Scene ladeMastermindSetzen()throws Exception
     {
@@ -79,6 +81,8 @@ public class GUI extends Application {
     }
     /**
     *laedt die scene zwischenVersuch.fxml
+     * @return Die scene zwischenVersuch
+     * @throws Exception moegliche Exceptions beim parsen der .fxml Datei
     */
     public Scene ladeZwischenVersuchStage()throws Exception
     {
@@ -91,7 +95,9 @@ public class GUI extends Application {
     }
     /**
     *laedt die scene masterSignal.fxml
-    */
+     * @return Die scene masterSignal
+     * @throws Exception moegliche Exceptions beim parsen der .fxml Datei
+     */
     public Scene ladeMastermindSignal()throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("stages/masterSignal.fxml"));
@@ -104,6 +110,8 @@ public class GUI extends Application {
     }
     /**
     *laedt die scene versuch.fxml
+     * @return Die scene versuch
+     * @throws Exception moegliche Exceptions beim parsen der .fxml Datei
     */
     public Scene ladeVersuchStage()throws Exception
     {
@@ -116,6 +124,8 @@ public class GUI extends Application {
     }
     /**
     *laedt die scene sieg.fxml
+     * @return Die scene sieg
+     * @throws Exception moegliche Exceptions beim parsen der .fxml Datei
     */
     public Scene ladeSiegStage()throws Exception
     {
@@ -128,7 +138,7 @@ public class GUI extends Application {
     }
     /**
     *skaliert die scene mastermindSetzen.fxml im Bezug auf die native Aufloesung des Displays
-    *@param Scene in der mastermindSetzen.fxml geladen wurde
+    *@param scene in der mastermindSetzen.fxml geladen wurde
     */
     private void mastermindSetzenAufloesung(Scene scene)
     {
@@ -143,7 +153,7 @@ public class GUI extends Application {
     }
     /**
     *skaliert die scene versuch.fxml im Bezug auf die native Aufloesung des Displays
-    *@param Scene in der versuch.fxml geladen wurde
+    *@param scene in der versuch.fxml geladen wurde
     */
     private void versuchsceneAufloesung(Scene scene)
     {
@@ -162,7 +172,7 @@ public class GUI extends Application {
     }
     /**
     *skaliert die scene masterSignal.fxml im Bezug auf die native Aufloesung des Displays
-    *@param Scene in der masterSignal.fxml geladen wurde
+    *@param scene in der masterSignal.fxml geladen wurde
     */
     private void signalSceneAufloesung(Scene scene)
     {
@@ -187,7 +197,7 @@ public class GUI extends Application {
     }
     /**
     *skaliert die scene zwischenVersuch.fxml im Bezug auf die native Aufloesung des Displays
-    *@param Scene in der zwischenVersuch.fxml geladen wurde
+    *@param scene in der zwischenVersuch.fxml geladen wurde
     */
     private void zwischenVersuchAufloesung(Scene scene)
     {
@@ -198,7 +208,7 @@ public class GUI extends Application {
     }
     /**
     *skaliert die scene sieg.fxml im Bezug auf die native Aufloesung des Displays
-    *@param Scene in der sieg.fxml geladen wurde
+    *@param scene in der sieg.fxml geladen wurde
     */
     private void siegAufloesung(Scene scene)
     {

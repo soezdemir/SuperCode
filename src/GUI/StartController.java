@@ -98,7 +98,7 @@ public class StartController
     	masterMind.setFarbeGedrueckt(true);
     }
     /**
-    *@see handleSchwarzAction(ActionEvent event)
+    *@see #handleSchwarzAction(ActionEvent event)
     */
     @FXML protected void handleWeissAction(ActionEvent event)
     {
@@ -107,7 +107,7 @@ public class StartController
     	masterMind.setFarbeGedrueckt(true);
     }
     /**
-    *@see handleSchwarzAction(ActionEvent event)
+    *@see #handleSchwarzAction(ActionEvent event)
     */
     @FXML protected void handleRotAction(ActionEvent event)
     {
@@ -116,7 +116,7 @@ public class StartController
         masterMind.setFarbeGedrueckt(true);
     }
     /**
-    *@see handleSchwarzAction(ActionEvent event)
+    *@see #handleSchwarzAction(ActionEvent event)
     */
     @FXML protected void handleBlauAction(ActionEvent event)
     {
@@ -125,7 +125,7 @@ public class StartController
         masterMind.setFarbeGedrueckt(true);
     }
     /**
-    *@see handleSchwarzAction(ActionEvent event)
+    *@see #handleSchwarzAction(ActionEvent event)
     */
     @FXML protected void handleGelbAction(ActionEvent event)
     {
@@ -134,7 +134,7 @@ public class StartController
         masterMind.setFarbeGedrueckt(true);
     }
     /**
-    *@see handleSchwarzAction(ActionEvent event)
+    *@see #handleSchwarzAction(ActionEvent event)
     */
     @FXML protected void handlePinkAction(ActionEvent event)
     {
@@ -143,7 +143,7 @@ public class StartController
         masterMind.setFarbeGedrueckt(true);
     }
     /**
-    *@see handleSchwarzAction(ActionEvent event)
+    *@see #handleSchwarzAction(ActionEvent event)
     */
     @FXML protected void handleOrangeAction(ActionEvent event)
     {
@@ -152,7 +152,7 @@ public class StartController
         masterMind.setFarbeGedrueckt(true);
     }
     /**
-    *@see handleSchwarzAction(ActionEvent event)
+    *@see #handleSchwarzAction(ActionEvent event)
     */
     @FXML protected void handleLilaAction(ActionEvent event)
     {
@@ -161,7 +161,7 @@ public class StartController
         masterMind.setFarbeGedrueckt(true);
     }
     /**
-    *@see handleSchwarzAction(ActionEvent event)
+    *@see #handleSchwarzAction(ActionEvent event)
     */
     @FXML protected void handleHellgruenAction(ActionEvent event)
     {
@@ -170,7 +170,7 @@ public class StartController
         masterMind.setFarbeGedrueckt(true);
     }
     /**
-    *@see handleSchwarzAction(ActionEvent event)
+    *@see #handleSchwarzAction(ActionEvent event)
     */
     @FXML protected void handleGruenAction(ActionEvent event)
     {
@@ -179,7 +179,7 @@ public class StartController
         masterMind.setFarbeGedrueckt(true);
     }
     /**
-    *@see handleSchwarzAction(ActionEvent event)
+    *@see #handleSchwarzAction(ActionEvent event)
     */  
     @FXML protected void handleGrauAction(ActionEvent event)
     {
@@ -211,7 +211,7 @@ public class StartController
         }
     }
     /**
-    *@see handlePos0Action(ActionEvent event)
+    *@see #handlePos0Action(ActionEvent event)
     */  
     @FXML protected void handlePos1Action(ActionEvent event)
     {
@@ -233,7 +233,7 @@ public class StartController
         }
     }
     /**
-    *@see handlePos0Action(ActionEvent event)
+    *@see #handlePos0Action(ActionEvent event)
     */  
     @FXML protected void handlePos2Action(ActionEvent event)
     {
@@ -255,7 +255,7 @@ public class StartController
         }
     }
     /**
-    *@see handlePos0Action(ActionEvent event)
+    *@see #handlePos0Action(ActionEvent event)
     */  
     @FXML protected void handlePos3Action(ActionEvent event)
     {
@@ -277,7 +277,7 @@ public class StartController
         }
     }
     /**
-    *@see handlePos0Action(ActionEvent event)
+    *@see #handlePos0Action(ActionEvent event)
     */  
     @FXML protected void handlePos4Action(ActionEvent event)
     {
@@ -339,7 +339,7 @@ public class StartController
         }
      }
     /**
-    *Beendet der Versuchspieler seine Runde so wird auf Sieg geprueft. Sieg->zeige Siegstage an
+    *Beendet der Versuchspieler seine Runde so wird auf Sieg geprueft. Sieg: zeige Siegstage an
     *Wenn SIegbedingung nicht erfuellt ist wird die zwischenVersuchScene angezeigt
     */
     @FXML protected void handleZugBeendenVersuchAction(ActionEvent event)throws Exception
@@ -391,18 +391,28 @@ public class StartController
         currentStage.setFullScreen(true);
     }
 
+    /**
+     * Zeichnet den Button der zuletzt ausgewaehlt wurde mit der entsprechenden Farbe neu
+     * @param source Der zu zeichnende Button
+     * @param position Index fuer den Array um die passende Farbe zu bestimmen
+     */
     private void zeichneNeu(Button source, int position)
     {
         posFarbe[position] = farbe;
         source.setStyle(SPIELFIGURPFAD+farbe+BILDDATEIENDUNG+SPIELFIGURGROESSE+NOREPEAT+BACKGROUNDIMAGEPOSITION);
     }
 
+    /**
+     * @see #zeichneNeu(Button, int)
+     */
     private void zeichneNeuMaster(Button source, int position)
     {
         posFarbe[position] = farbe;
         source.setStyle(SPIELFIGURPFAD+farbe+"_mm"+BILDDATEIENDUNG+SPIELFIGURGROESSE+NOREPEAT+BACKGROUNDIMAGEPOSITION);
     }
-
+    /**
+     * @see #zeichneNeu(Button, int)
+     */
     private void zeichneNeuSignal(Button source, int position)
     {
     	posSignal[position] = farbe;
