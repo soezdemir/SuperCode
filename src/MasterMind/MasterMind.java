@@ -1,10 +1,13 @@
 /**
  * Created by cpatzek & soezdemir 17/05/2017.
+ * @author Christian Patzek und Sadri Özdemir
  */
 
 package MasterMind;
 
-// Klasse die den Spielfluss bestimmt
+/**
+* Klasse die den Spielfluss bestimmt. Beinhaltet die Hauptschleife der Spielengine und leitet Ueberpruefung der Felder ein.
+*/
 public class MasterMind implements Runnable
 {
     private Spielbrett spielbrett;
@@ -24,7 +27,9 @@ public class MasterMind implements Runnable
     public boolean isFeldStatus() {
         return feldStatus;
     }
-
+/**
+*Gibt an ob das aktuelle Feld richtig gesetzt ist
+*/
     private boolean feldStatus = true;
     private int versuche = 0;
 
@@ -71,7 +76,9 @@ public class MasterMind implements Runnable
             System.out.println(e.getMessage());
         }
     }
-   //Belege tippfeld, die Runde kann erst beendet werden wenn das Feld richtig gesetzt wurde
+   /**
+   *Belege tippfeld, die Runde kann erst beendet werden wenn das Feld richtig gesetzt wurde
+   */
     private void setzeTippFeld()
     {
         try{
@@ -96,7 +103,10 @@ public class MasterMind implements Runnable
 		System.out.println(e.getMessage());
      }
     }
-    //preuft ob das Versuchs Feld dem Master Feld entspricht, also ob die Sieg Bedingung erfuellt ist
+    /**
+    * preuft ob das Versuchs Feld dem Master Feld entspricht, also ob die Sieg Bedingung erfuellt ist
+    *@return : gibt true zurueck wenn die Siegbedingung erfuellt ist
+    */
     private boolean pruefeSiegBedingung()
     {
         for(int i = 0; i < spielbrett.getVersuch().figuren.length; i++)
@@ -110,7 +120,9 @@ public class MasterMind implements Runnable
         siegBedingung = true;
         return true;
     }
-    //Setzen des Versuchsfeldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
+    /**
+    *Setzen des Versuchsfeldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
+    */
     private void setzeVersuchsFeld()
     {
         try{
@@ -139,7 +151,9 @@ public class MasterMind implements Runnable
     		System.out.println(e.getMessage());
     	}
     }
-    //Setzen des MasterMind Feldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
+    /**
+    *Setzen des MasterMind Feldes. Die Runde kann erst beendet werden, wenn das Feld richtig gesetzt wurde
+    */
     private void setzeMasterMind()
     {
     	try{
@@ -170,8 +184,10 @@ public class MasterMind implements Runnable
         
     }
 
-    //Hauptschleife des Spiels. Sequenziertes setzen der Felde und pruefen auf Siegbedingung. Wurde Sieg erreicht,
-    //Frage ob Spiel beendet werden soll oder weiter gespielt werden soll
+    /**
+    *Hauptschleife des Spiels. Sequenziertes setzen der Felde und pruefen auf Siegbedingung. Wurde Sieg erreicht,
+    *Frage ob Spiel beendet werden soll oder weiter gespielt werden soll
+    */
     public void run()
     {
         setzeMasterMind();
