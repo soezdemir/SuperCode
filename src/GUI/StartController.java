@@ -1,5 +1,6 @@
 /**
  * Created by cpatzek & soezdemir 17/05/2017.
+ *@author Christian Patzek und Sadri Oezdemir
  */
 
 package GUI;
@@ -61,7 +62,9 @@ public class StartController
     private static final String SIGNAL = "#signal";
     private static final String SIEGMASTERMIND = BACKGROUND+HINTERGRUNDPFAD+"bg-mastermind-win"+BILDDATEIENDUNG;
     private static final String SIGNALBACKGROUND = BACKGROUND+HINTERGRUNDPFAD+"bg-signal-slot"+BILDDATEIENDUNG;
-
+    /**
+    *bei anklicken des Startbuttons fragt der Controller bei der GUI die notwendigen Scenen an. Anschliessend wird die scene mastermindSetzen geladen
+    */
     @FXML protected void handleStartButtonAction(ActionEvent event)throws Exception
     {
         zug = 1;
@@ -85,84 +88,109 @@ public class StartController
     {
         System.exit(0);
     }
-
+    /**
+    *setzt die angegeben Farbe in der Engine und teilt der engine mit das ein Farb-Button gedrueckt wurde
+    */
     @FXML protected void handleSchwarzAction(ActionEvent event)
     {
     	masterMind.setFarbe(Spielfigur.SCHWARZ);
     	farbe = "schwarz";
     	masterMind.setFarbeGedrueckt(true);
     }
-    
+    /**
+    *@see handleSchwarzAction(ActionEvent event)
+    */
     @FXML protected void handleWeissAction(ActionEvent event)
     {
     	masterMind.setFarbe(Spielfigur.WEISS);
     	farbe = "weiss";
     	masterMind.setFarbeGedrueckt(true);
     }
-    
+    /**
+    *@see handleSchwarzAction(ActionEvent event)
+    */
     @FXML protected void handleRotAction(ActionEvent event)
     {
         masterMind.setFarbe(Spielfigur.ROT);
         farbe = "rot";
         masterMind.setFarbeGedrueckt(true);
     }
-
+    /**
+    *@see handleSchwarzAction(ActionEvent event)
+    */
     @FXML protected void handleBlauAction(ActionEvent event)
     {
         masterMind.setFarbe(Spielfigur.BLAU);
         farbe = "blau";
         masterMind.setFarbeGedrueckt(true);
     }
-
+    /**
+    *@see handleSchwarzAction(ActionEvent event)
+    */
     @FXML protected void handleGelbAction(ActionEvent event)
     {
         masterMind.setFarbe(Spielfigur.GELB);
         farbe = "gelb";
         masterMind.setFarbeGedrueckt(true);
     }
-
+    /**
+    *@see handleSchwarzAction(ActionEvent event)
+    */
     @FXML protected void handlePinkAction(ActionEvent event)
     {
         masterMind.setFarbe(Spielfigur.PINK);
         farbe = "pink";
         masterMind.setFarbeGedrueckt(true);
     }
-
+    /**
+    *@see handleSchwarzAction(ActionEvent event)
+    */
     @FXML protected void handleOrangeAction(ActionEvent event)
     {
         masterMind.setFarbe(Spielfigur.ORANGE);
         farbe = "orange";
         masterMind.setFarbeGedrueckt(true);
     }
-
+    /**
+    *@see handleSchwarzAction(ActionEvent event)
+    */
     @FXML protected void handleLilaAction(ActionEvent event)
     {
         masterMind.setFarbe(Spielfigur.LILA);
         farbe = "lila";
         masterMind.setFarbeGedrueckt(true);
     }
-
+    /**
+    *@see handleSchwarzAction(ActionEvent event)
+    */
     @FXML protected void handleHellgruenAction(ActionEvent event)
     {
         masterMind.setFarbe(Spielfigur.HELLGRUEN);
         farbe = "hellgruen";
         masterMind.setFarbeGedrueckt(true);
     }
-
+    /**
+    *@see handleSchwarzAction(ActionEvent event)
+    */
     @FXML protected void handleGruenAction(ActionEvent event)
     {
         masterMind.setFarbe(Spielfigur.GRUEN);
         farbe = "gruen";
         masterMind.setFarbeGedrueckt(true);
     }
-    
+    /**
+    *@see handleSchwarzAction(ActionEvent event)
+    */  
     @FXML protected void handleGrauAction(ActionEvent event)
     {
     	masterMind.setFarbe(Spielfigur.GRAU);
     	farbe = "grau";
     	masterMind.setFarbeGedrueckt(true);
     }
-    
+    /**
+    *Wurde eine Position gedrueckt so wird gefragt ob eine Farbe gedrueckt wurde. Falls ja wird die Position neu gezeichnet.
+    *Anschliessend wird die Position als gedrueckt fuer die Engine gekennzeichnet.
+    */
     @FXML protected void handlePos0Action(ActionEvent event)
     {
         masterMind.setPosition(0);
@@ -182,7 +210,9 @@ public class StartController
             masterMind.setPositionGedrueckt(true);
         }
     }
-
+    /**
+    *@see handlePos0Action(ActionEvent event)
+    */  
     @FXML protected void handlePos1Action(ActionEvent event)
     {
         masterMind.setPosition(1);
@@ -202,7 +232,9 @@ public class StartController
             masterMind.setPositionGedrueckt(true);
         }
     }
-
+    /**
+    *@see handlePos0Action(ActionEvent event)
+    */  
     @FXML protected void handlePos2Action(ActionEvent event)
     {
         masterMind.setPosition(2);
@@ -222,7 +254,9 @@ public class StartController
             masterMind.setPositionGedrueckt(true);
         }
     }
-
+    /**
+    *@see handlePos0Action(ActionEvent event)
+    */  
     @FXML protected void handlePos3Action(ActionEvent event)
     {
         masterMind.setPosition(3);
@@ -242,7 +276,9 @@ public class StartController
             masterMind.setPositionGedrueckt(true);
         }
     }
-
+    /**
+    *@see handlePos0Action(ActionEvent event)
+    */  
     @FXML protected void handlePos4Action(ActionEvent event)
     {
         masterMind.setPosition(4);
@@ -262,7 +298,10 @@ public class StartController
             masterMind.setPositionGedrueckt(true);
         }
     }
-
+    /**
+    *wird der MasterMind setzen Zug beendet, so wird das Mastermind Feld in die signalScene eingetragen.
+    *Anschliessend wird die versuchscene als neue Scene geladen
+    */
     @FXML protected void handleZugBeendenInitialAction(ActionEvent event)throws Exception
     {
     	if(masterMind.isFeldStatus())
@@ -275,7 +314,10 @@ public class StartController
         	currentStage.setFullScreen(true);
     	}
     }
-    
+    /**
+    *Beendet der Mastermind seinen Zug in der signalScene, so werden die neuen Boxen fuer die naechste Runde in versuchscene aktiviert bzw. deaktiviert
+    *Die Signalstifte werden in der versuchscene gesetzt und am Ende wird die versuchscene angezeigt
+    */
     @FXML protected void handleZugBeendenMasterAction(ActionEvent event)throws Exception
     {
         if(masterMind.isFeldStatus())
@@ -296,7 +338,10 @@ public class StartController
             currentStage.setFullScreen(true);
         }
      }
-
+    /**
+    *Beendet der Versuchspieler seine Runde so wird auf Sieg geprueft. Sieg->zeige Siegstage an
+    *Wenn SIegbedingung nicht erfuellt ist wird die zwischenVersuchScene angezeigt
+    */
     @FXML protected void handleZugBeendenVersuchAction(ActionEvent event)throws Exception
     {
     	if(masterMind.isFeldStatus())
@@ -331,7 +376,9 @@ public class StartController
             currentStage.setFullScreen(true);
         }
     }
-
+    /**
+    *Schreibe den Versuch des Spielers in die signalScene, zeige signalScene an
+    */
     @FXML protected void handleWeiterVersuchAction(ActionEvent event)throws Exception
     {
     	for(int i = 0; i < 5; i++)
