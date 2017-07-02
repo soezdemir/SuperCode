@@ -7,7 +7,9 @@ package MasterMind;
 import java.util.Vector;
 
 
-//Dies war eine Testklasse fuer die Pruefung des Tippfeldes. Deprecated
+/**Dies war eine Testklasse fuer die Pruefung des Tippfeldes. 
+*   Deprecated
+*/
 public class FarbVektor
 {
     public int getFarbe() {
