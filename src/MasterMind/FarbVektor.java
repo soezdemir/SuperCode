@@ -9,7 +9,7 @@ import java.util.Vector;
 
 
 /**Dies war eine Testklasse fuer die Pruefung des Tippfeldes. 
-*   Deprecated
+* @deprecated
 */
 public class FarbVektor
 {
