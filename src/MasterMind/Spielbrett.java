@@ -1,24 +1,29 @@
 /**
  * Created by cpatzek & soezdemir 17/05/2017.
+ *@ author: Christian Patzek und Sadri Oezdemir
  */
 package MasterMind;
-//Das Spielbrett enthaelt alle moeglichen Spielfelder. Es verwaltet diese und kann sie ueberpreufen
+/**
+*Das Spielbrett enthaelt alle moeglichen Spielfelder. Es verwaltet diese und kann sie ueberpreufen.
+*/
 public class Spielbrett
 {
     public static final int VERSUCHSFELD = 0;
     public static final int MASTERFELD = 1;
-    //deprecated siehe MasterMind.FarbVektor.java
-    //public static final int SCHWARZERHOEHEN = 2;
-    //public static final int WEISSERHOEHEN = 3;
-
-    /*private MasterMind.FarbVektor rot = new MasterMind.FarbVektor(Spielfigur.ROT);
-    private MasterMind.FarbVektor blau = new MasterMind.FarbVektor(Spielfigur.BLAU);
-    private MasterMind.FarbVektor gruen = new MasterMind.FarbVektor(Spielfigur.GRUEN);
-    private MasterMind.FarbVektor gelb = new MasterMind.FarbVektor(Spielfigur.GELB);
-    private MasterMind.FarbVektor lila = new MasterMind.FarbVektor(Spielfigur.LILA);
-    private MasterMind.FarbVektor orange = new MasterMind.FarbVektor(Spielfigur.ORANGE);
-    private MasterMind.FarbVektor pink = new MasterMind.FarbVektor(Spielfigur.PINK);
-    private MasterMind.FarbVektor hellgruen = new MasterMind.FarbVektor(Spielfigur.HELLGRUEN);*/
+    /**
+    *@deprecated : siehe MasterMind.FarbVektor.java
+    *public static final int SCHWARZERHOEHEN = 2;
+    *public static final int WEISSERHOEHEN = 3;
+    *
+    *private MasterMind.FarbVektor rot = new MasterMind.FarbVektor(Spielfigur.ROT);
+    *private MasterMind.FarbVektor blau = new MasterMind.FarbVektor(Spielfigur.BLAU);
+    *private MasterMind.FarbVektor gruen = new MasterMind.FarbVektor(Spielfigur.GRUEN);
+    *private MasterMind.FarbVektor gelb = new MasterMind.FarbVektor(Spielfigur.GELB);
+    *private MasterMind.FarbVektor lila = new MasterMind.FarbVektor(Spielfigur.LILA);
+    *private MasterMind.FarbVektor orange = new MasterMind.FarbVektor(Spielfigur.ORANGE);
+    *private MasterMind.FarbVektor pink = new MasterMind.FarbVektor(Spielfigur.PINK);
+    *private MasterMind.FarbVektor hellgruen = new MasterMind.FarbVektor(Spielfigur.HELLGRUEN);
+    */
 
     public FigurenFeld getFiguren() {
         return figuren;
@@ -58,26 +63,29 @@ public class Spielbrett
     private TippFeld tipp;
     private FigurenFeld figuren;
 
-    //deprecated
-    /*public void resetVektoren()
-    {
-        rot.setSchwarz(0);rot.setWeiss(0);
-        blau.setSchwarz(0);blau.setWeiss(0);
-        gruen.setSchwarz(0);gruen.setWeiss(0);
-        gelb.setSchwarz(0);gelb.setWeiss(0);
-        lila.setSchwarz(0);lila.setWeiss(0);
-        orange.setSchwarz(0);orange.setWeiss(0);
-        pink.setSchwarz(0);pink.setWeiss(0);
-        hellgruen.setSchwarz(0);hellgruen.setWeiss(0);
-    }*/
-    //preuft ob die Menge der gesetzten Schwarz, Weiss figuren im Tippfeld tatsaechlich richtig ist
+    /**
+    *@deprecated
+    *public void resetVektoren()
+    *{
+    *    rot.setSchwarz(0);rot.setWeiss(0);
+    *    blau.setSchwarz(0);blau.setWeiss(0);
+    *    gruen.setSchwarz(0);gruen.setWeiss(0);
+    *    gelb.setSchwarz(0);gelb.setWeiss(0);
+    *    lila.setSchwarz(0);lila.setWeiss(0);
+    *    orange.setSchwarz(0);orange.setWeiss(0);
+    *    pink.setSchwarz(0);pink.setWeiss(0);
+    *    hellgruen.setSchwarz(0);hellgruen.setWeiss(0);
+    *}
+    */
+    
+    /**
+    * preuft ob die Menge der gesetzten Schwarz, Weiss figuren im Tippfeld tatsaechlich richtig ist
+    *@param schwarz ist die Menge an Schwarz die gesetzt sein muessen
+    *@param weiss ist die Menge an Weiss die gesetzt sein muessen
+    *@return true wenn das Feld richtig gesetzt wurde
+    */
     public boolean pruefeWeissSchwarz(int schwarz, int weiss)
     {
-        /*int schwarz = rot.getSchwarz()+blau.getSchwarz()+gruen.getSchwarz()+gelb.getSchwarz()+lila.getSchwarz()
-                +orange.getSchwarz()+pink.getSchwarz()+hellgruen.getSchwarz();
-        System.out.println("Schwarz in Vektoren: "+schwarz);
-        int weiss = rot.getWeiss()+blau.getWeiss()+gruen.getWeiss()+gelb.getWeiss()+lila.getWeiss()
-                +orange.getWeiss()+pink.getWeiss()+hellgruen.getWeiss();*/
         int schwarzGesetzt = 0;
         int weissGesetzt = 0;
         for(Spielfigur tipp: tipp.figuren)
@@ -87,69 +95,72 @@ public class Spielbrett
             else if(tipp.getFarbe() == Spielfigur.SCHWARZ)
                 schwarzGesetzt++;
         }
-        //System.out.println("Schwarz tatsaechlich gesetzt: "+schwarzGesetzt);
         return((schwarzGesetzt == schwarz && weissGesetzt == weiss));
     }
-    //deprecated
-    /*public void bestimmeFarbvektor(int farbe, int fall)
-    {
-        switch(farbe)
-        {
-            case Spielfigur.BLAU:
-                if(fall == SCHWARZERHOEHEN)
-                    blau.erhoeheAnzahlSchwarz();
-                else
-                    blau.erhoeheAnzahlWeiss();
-                break;
-            case Spielfigur.GELB:
-                if(fall == SCHWARZERHOEHEN)
-                    gelb.erhoeheAnzahlSchwarz();
-                else
-                    gelb.erhoeheAnzahlWeiss();
-                break;
-            case Spielfigur.GRUEN:
-                if(fall == SCHWARZERHOEHEN)
-                    gruen.erhoeheAnzahlSchwarz();
-                else
-                    gruen.erhoeheAnzahlWeiss();
-                break;
-            case Spielfigur.HELLGRUEN:
-                if(fall == SCHWARZERHOEHEN)
-                    hellgruen.erhoeheAnzahlSchwarz();
-                else
-                    hellgruen.erhoeheAnzahlWeiss();
-                break;
-            case Spielfigur.LILA:
-                if(fall == SCHWARZERHOEHEN)
-                    lila.erhoeheAnzahlSchwarz();
-                else
-                    lila.erhoeheAnzahlWeiss();
-                break;
-            case Spielfigur.ORANGE:
-                if(fall == SCHWARZERHOEHEN)
-                    orange.erhoeheAnzahlSchwarz();
-                else
-                    orange.erhoeheAnzahlWeiss();
-                break;
-            case Spielfigur.PINK:
-                if(fall == SCHWARZERHOEHEN)
-                    pink.erhoeheAnzahlSchwarz();
-                else
-                    pink.erhoeheAnzahlWeiss();
-                break;
-            case Spielfigur.ROT:
-                if(fall == SCHWARZERHOEHEN)
-                    rot.erhoeheAnzahlSchwarz();
-                else
-                    rot.erhoeheAnzahlWeiss();
-                break;
-        }
-    }*/
+    /**
+    *@deprecated
+    *public void bestimmeFarbvektor(int farbe, int fall)
+    *{
+    *    switch(farbe)
+    *    {
+    *        case Spielfigur.BLAU:
+    *            if(fall == SCHWARZERHOEHEN)
+    *                blau.erhoeheAnzahlSchwarz();
+    *            else
+    *                blau.erhoeheAnzahlWeiss();
+    *            break;
+    *        case Spielfigur.GELB:
+    *            if(fall == SCHWARZERHOEHEN)
+    *                gelb.erhoeheAnzahlSchwarz();
+    *            else
+    *                gelb.erhoeheAnzahlWeiss();
+    *            break;
+    *        case Spielfigur.GRUEN:
+    *            if(fall == SCHWARZERHOEHEN)
+    *                gruen.erhoeheAnzahlSchwarz();
+    *            else
+    *                gruen.erhoeheAnzahlWeiss();
+    *            break;
+    *        case Spielfigur.HELLGRUEN:
+    *            if(fall == SCHWARZERHOEHEN)
+    *                hellgruen.erhoeheAnzahlSchwarz();
+    *            else
+    *                hellgruen.erhoeheAnzahlWeiss();
+    *            break;
+    *        case Spielfigur.LILA:
+    *            if(fall == SCHWARZERHOEHEN)
+    *                lila.erhoeheAnzahlSchwarz();
+    *            else
+    *                lila.erhoeheAnzahlWeiss();
+    *            break;
+    *        case Spielfigur.ORANGE:
+    *            if(fall == SCHWARZERHOEHEN)
+    *                orange.erhoeheAnzahlSchwarz();
+    *            else
+    *                orange.erhoeheAnzahlWeiss();
+    *            break;
+    *        case Spielfigur.PINK:
+    *            if(fall == SCHWARZERHOEHEN)
+    *                pink.erhoeheAnzahlSchwarz();
+    *            else
+    *                pink.erhoeheAnzahlWeiss();
+    *            break;
+    *        case Spielfigur.ROT:
+    *            if(fall == SCHWARZERHOEHEN)
+    *                rot.erhoeheAnzahlSchwarz();
+    *            else
+    *                rot.erhoeheAnzahlWeiss();
+    *            break;
+    *    }
+    *}
+    */
 
-    //algorithmus zur Berechnung der Anzahl der Schwarzen und Weissen Figuren im Tippfeld
+    /**
+    *algorithmus zur Berechnung der Anzahl der Schwarzen und Weissen Figuren im Tippfeld die vorhanden sein muessen
+    *@return true wenn Feld richtig gesetzt wurde
+    */
     public boolean pruefeTippFeld()
     {
-        //resetVektoren();
         int schwarz = 0;
         int weiss = 0;
         boolean[] schwarzRecall = new boolean[5];
@@ -163,7 +174,6 @@ public class Spielbrett
                     if(i == j && !schwarzRecall[i])
                     {
                         schwarz++;
-                        //bestimmeFarbvektor(versuch.figuren[i].getFarbe(), SCHWARZERHOEHEN);
                         schwarzRecall[i] = true;
                         if(weissRecall[i])
                             weiss--;
@@ -173,24 +183,11 @@ public class Spielbrett
                     {
                         weiss++;
                         weissRecall[i] = true;
-                        //bestimmeFarbvektor(versuch.figuren[i].getFarbe(), WEISSERHOEHEN);
-                        //j+=5;
                     }
                 }
             }
         }
         return pruefeWeissSchwarz(schwarz, weiss);
-    }
-    public boolean pruefeVersuchsOderMasterFeld(int fall)
-    {
-        switch(fall)
-        {
-            case VERSUCHSFELD:
-                return versuch.pruefeFeldAufGesetzt();
-            case MASTERFELD:
-                return master.pruefeFeldAufGesetzt();
-        }
-        return true;
     }
     Spielbrett()
     {
